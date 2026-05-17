@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Initiatives & Updates — West Bengal Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background: var(--paper); }
+    .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        color: var(--ink-blue);
+        text-decoration: none;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 0.2s;
+    }
+    .back-home:hover { color: var(--saffron-dark); transform: translateX(-4px); }
+    
+    .archive-item { cursor: default; }
+    .archive-item:hover { transform: none; }
+    
+    .non-manifesto-badge {
+        display: inline-block;
+        background: #fdf2f2;
+        color: #9b1c1c;
+        border: 1px solid #f8b4b4;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-family: 'Space Mono', monospace;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .disclaimer-box {
+        background: #fff8f1;
+        border: 1px solid #ffedd5;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .disclaimer-icon { font-size: 24px; }
+    .disclaimer-text {
+        font-family: 'Crimson Pro', serif;
+        font-size: 16px;
+        color: #9a3412;
+        line-height: 1.5;
+    }
+
+    .item-sources {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-top: 1px solid var(--rule-light);
+        padding-top: 12px;
+    }
+    .archive-source-link {
+        font-family: 'Space Mono', monospace;
+        font-size: 9px;
+        color: var(--ink-blue);
+        text-decoration: none;
+        background: rgba(0, 71, 171, 0.04);
+        padding: 4px 8px;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 71, 171, 0.1);
+        transition: all 0.2s;
+    }
+    .archive-source-link:hover {
+        background: rgba(0, 71, 171, 0.08);
+        border-color: var(--ink-blue);
+    }
+
+    .archive-item-title {
+        color: var(--ink-blue);
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        font-weight: 900;
+        margin: 8px 0;
+        display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="archive-container">
+    <a href="index.html" class="back-home">← Back to Dashboard</a>
+    
+    <header class="archive-header">
+      <h1 class="archive-title">Other Initiatives & Updates</h1>
+      <p style="font-family:'Crimson Pro', serif; font-size: 18px; color: var(--ink-faint);">
+        Tracking significant government actions and policy updates not explicitly listed in the 2026 Manifesto.
+      </p>
+    </header>
+
+    <div class="disclaimer-box">
+        <span class="disclaimer-icon">ℹ️</span>
+        <div class="disclaimer-text">
+            <strong>Manifesto Separation:</strong> The items listed on this page are independent government initiatives. 
+            They are <strong>not part of the official BJP Manifesto (Bhoroshar Shopoth)</strong> and are therefore 
+            not included in the main promise completion statistics on the homepage.
+        </div>
+    </div>
+
+    <div class="archive-timeline" id="initiatives-timeline">
+        <div class="loading">Loading initiatives...</div>
+    </div>
+
+    <div id="load-more-container" style="display: none; text-align: center; margin: 40px 0;">
+        <button id="load-more-btn" class="back-home" style="cursor: pointer; background: none; border: 1px solid var(--rule); padding: 10px 20px; border-radius: 4px;">Load More Initiatives</button>
+    </div>
+  </div>
+
+  <script>
+    let allUpdates = [];
+    let displayedCount = 0;
+    const ITEMS_PER_PAGE = 20;
+
+    async function init() {
+        try {
+            const res = await fetch('data/initiative_updates.json');
+            if(!res.ok) throw new Error('Failed to load initiatives');
+            allUpdates = await res.json();
+            
+            // Sort by date desc
+            allUpdates.sort((a, b) => b.date.localeCompare(a.date));
+            
+            const targetId = window.location.hash.substring(1);
+            if (targetId) {
+                // If there's a deep link, find where it is
+                const targetIdx = allUpdates.findIndex(u => u.promiseId === targetId);
+                if (targetIdx !== -1) {
+                    // Render everything up to the target + a few more
+                    displayedCount = 0;
+                    renderBatch(Math.max(ITEMS_PER_PAGE, targetIdx + 5));
+                    
+                    // Small delay to ensure DOM is ready
+                    setTimeout(() => scrollToTarget(targetId), 300);
+                } else {
+                    renderBatch(ITEMS_PER_PAGE);
+                }
+            } else {
+                renderBatch(ITEMS_PER_PAGE);
+            }
+
+            document.getElementById('load-more-btn')?.addEventListener('click', () => renderBatch(ITEMS_PER_PAGE));
+
+        } catch(e) {
+            console.error(e);
+            document.getElementById('initiatives-timeline').innerHTML = '<div class="loading error-state">Failed to load initiatives data.</div>';
+        }
+    }
+
+    function renderBatch(count) {
+        const timeline = document.getElementById('initiatives-timeline');
+        if (displayedCount === 0) timeline.innerHTML = '';
+        
+        const nextBatch = allUpdates.slice(displayedCount, displayedCount + count);
+        if (!nextBatch.length) return;
+
+        // Group by date
+        const groups = nextBatch.reduce((acc, u) => {
+            if(!acc[u.date]) acc[u.date] = [];
+            acc[u.date].push(u);
+            return acc;
+        }, {});
+
+        Object.keys(groups).sort((a, b) => b.localeCompare(a)).forEach(date => {
+            const formattedDate = new Date(date).toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'long', year: 'numeric'
+            });
+            
+            let dayGroup = document.querySelector(`[data-date="${date}"]`);
+            if (!dayGroup) {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'archive-day-group';
+                groupDiv.setAttribute('data-date', date);
+                groupDiv.innerHTML = `<span class="archive-date-label">${formattedDate}</span><div class="items-container"></div>`;
+                timeline.appendChild(groupDiv);
+                dayGroup = groupDiv;
+            }
+            
+            const container = dayGroup.querySelector('.items-container');
+            groups[date].forEach(u => {
+                // Check if already in DOM (can happen with deep-link render then load more)
+                if (document.getElementById(u.promiseId)) return;
+
+                const item = document.createElement('div');
+                item.className = 'archive-item';
+                item.id = u.promiseId; // Set ID for deep linking
+                item.innerHTML = `
+                    <span class="non-manifesto-badge">Non-Manifesto Initiative</span>
+                    <span class="archive-item-meta">${u.category.replace('-', ' ')}</span>
+                    <span class="archive-item-title">${u.title}</span>
+                    <div class="archive-item-note">${u.note}</div>
+                    ${u.sources ? `
+                        <div class="item-sources">
+                            ${u.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                `;
+                container.appendChild(item);
+            });
+        });
+
+        displayedCount += nextBatch.length;
+        const loadMoreWrap = document.getElementById('load-more-container');
+        if (displayedCount < allUpdates.length) {
+            loadMoreWrap.style.display = 'block';
+        } else {
+            loadMoreWrap.style.display = 'none';
+        }
+    }
+
+    function scrollToTarget(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.backgroundColor = 'rgba(232, 98, 10, 0.08)';
+            el.style.borderRadius = '8px';
+            el.style.padding = '15px';
+            el.style.marginLeft = '-15px';
+            el.style.marginRight = '-15px';
+            el.style.border = '1px solid var(--saffron-mid)';
+            setTimeout(() => { 
+                el.style.backgroundColor = ''; 
+                el.style.border = 'none';
+                el.style.padding = '';
+                el.style.marginLeft = '';
+                el.style.marginRight = '';
+            }, 3000);
+        }
+    }
+
+    init();
+
+    window.addEventListener('hashchange', () => {
+        const targetId = window.location.hash.substring(1);
+        if (targetId) scrollToTarget(targetId);
+    });
+  </script>
+</body>
+
+</html>

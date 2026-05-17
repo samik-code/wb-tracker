@@ -1,0 +1,60 @@
+[
+  {
+    "promiseId": "update-5",
+    "title": "Assembly Live Streaming Proposal",
+    "date": "2026-05-16",
+    "category": "governance",
+    "note": "Chief Minister Suvendu Adhikari proposed live streaming of Question Hour, debates, bills, and budget sessions to ensure transparency. He urged all parties to maintain decorum and stated that opposition members will be given adequate opportunity to participate.",
+    "sources": [
+      {
+        "url": "https://www.newsonair.gov.in/west-bengal-cm-suvendu-adhikari-calls-for-greater-transparency-in-assembly-proceedings/",
+        "name": "DD News On Air · May 16, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "update-4",
+    "title": "Handover of NH Stretches to NHAI",
+    "date": "2026-05-16",
+    "category": "infrastructure",
+    "note": "West Bengal government approved the handover of seven national highway stretches (totaling ~196 km) to NHAI and NHIDCL. The stretches include NH-116 and NH-131A for NHAI, and segments in North Bengal for NHIDCL, aimed at facilitating modernization and widening projects.",
+    "sources": [
+      { "url": "https://www.ptinews.com/story/national/bengal-govt-gives-nod-for-handover-of-seven-national-highway-stretches-to-nhai-nhidcl/3673942", "name": "PTI News · May 16, 2026" },
+      { "url": "https://theprint.in/india/bengal-govt-gives-nod-for-handover-of-seven-national-highway-stretches-to-nhai-nhidcl/2933315/", "name": "The Print · May 16, 2026" }
+    ]
+  },
+  {
+    "promiseId": "update-3",
+    "title": "Caste Certificate Re-verification",
+    "date": "2026-05-16",
+    "category": "governance",
+    "note": "West Bengal government ordered the re-verification of all caste certificates (SC/ST/OBC) issued since 2011 to identify and cancel fraudulent ones issued under the previous administration.",
+    "sources": [
+      { "url": "https://www.ptinews.com/story/national/bengal-govt-orders-re-verification-of-caste-certificates-issued-since-2011/3670678", "name": "PTI · May 15, 2026" },
+      { "url": "https://www.thehindu.com/news/national/west-bengal/bengal-government-caste-certificates-verification-since-2011-bjp-minister-tudu/article70986241.ece", "name": "The Hindu · May 16, 2026" }
+    ]
+  },
+  {
+    "promiseId": "update-2",
+    "title": "Mandatory Vande Mataram in Schools",
+    "date": "2026-05-14",
+    "category": "education",
+    "note": "The School Education Department issued an order making the singing of 'Vande Mataram' mandatory during assembly prayers in all schools across West Bengal with immediate effect.",
+    "sources": [
+      {
+        "url": "https://wbbse.wb.gov.in/ReadWriteData/Notification/134233121877569244.pdf",
+        "name": "WBBSE Notification · May 14, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "update-1",
+    "title": "Geo-tagged Garbage Complaint App",
+    "date": "2026-05-14",
+    "category": "infrastructure",
+    "note": "A new technology-driven mobile app was announced to allow citizens to report garbage accumulation in real-time. Geo-tagging will alert civic authorities, with a target cleanup time of 1-2 hours.",
+    "sources": [
+      { "url": "https://indianexpress.com/article/cities/kolkata/womens-helpline-geo-tagging-based-garbage-complaint-here-are-the-latest-initiatives-of-the-new-bjp-government-in-bengal-10691140/", "name": "Indian Express · May 14, 2026" }
+    ]
+  }
+]

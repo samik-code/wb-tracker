@@ -1,0 +1,317 @@
+[
+  {
+    "promiseId": "youth-3",
+    "title": "Official Age Relaxation Notification Issued",
+    "date": "2026-05-16",
+    "category": "youth",
+    "note": "The Finance Department officially implemented the 5-year age relaxation by amending the West Bengal Services (Raising of Age-limit) Rules, 1981 via Notification 1707-F(P2). Upper age limits for recruitment are now officially raised to 41 years for Group A, 44 years for Group B, and 45 years for Groups C & D.",
+    "sources": [
+      {
+        "url": "https://finance.wb.gov.in/writereaddata/1707-F(P2).pdf",
+        "name": "Finance Department Notification · May 16, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "governance-9",
+    "title": "Howrah Station Eviction & Demolition",
+    "date": "2026-05-17",
+    "category": "governance",
+    "note": "A joint eviction drive by railway authorities, RPF, GRP, and Howrah City Police demolished over 150 illegal shops and makeshift structures outside Howrah Station to clear chronic land encroachment and pedestrian congestion. While passenger associations welcomed the decongestion, affected hawkers protested the move, alleging they received only a one-day notice with no prior rehabilitation plans.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/howrah-hooghly/bulldozer-near-howrah-station-to-demolish-illegal-shops-sparks-controversy-dgtld/cid/1687394",
+        "name": "Anandabazar Patrika · May 17, 2026"
+      },
+      {
+        "url": "https://www.thehindu.com/news/national/west-bengal/major-anti-encroachment-drive-conducted-to-clear-out-howrah-station-area-in-bengal/article70989803.ece",
+        "name": "The Hindu · PTI · May 17, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "national-security-2",
+    "title": "Fencing Accelerated in N 24 Parganas",
+    "date": "2026-05-17",
+    "category": "national-security",
+    "note": "Barbed-wire fencing has sped up along the India-Bangladesh border in North 24 Parganas following CM Suvendu Adhikari's directive to expedite land handovers to the BSF. Basirhat police and BSF officials conducted joint site inspections in Bongaon and Basirhat sectors to coordinate land transfer. In Bongaon, farmers have consented to hand over 20 of the required 24 acres, while authorities continue discussions with Basirhat residents to resolve concerns about farmland beyond the fence.",
+    "sources": [
+      {
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/border-fencing-picks-up-pace-in-n-24-pgns/articleshow/131145451.cms",
+        "name": "Times of India · May 17, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "education-1",
+    "title": "MoU Signed for PM SHRI Schools",
+    "date": "2026-05-16",
+    "category": "education",
+    "note": "West Bengal signed an MoU with the Centre to implement PM SHRI schools, ending a long-standing standoff. The scheme will upgrade hundreds of schools with modern labs and smart classrooms in line with NEP.",
+    "sources": [
+      {
+        "url": "https://timesofindia.indiatimes.com/education/news/pm-shri-schools-enter-bengal-after-bjp-win-ends-tmcs-long-standoff-with-centre/articleshow/131134033.cms",
+        "name": "Times of India · May 16, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "governance-1",
+    "title": "Ex-Minister Rathin Ghosh Interrogated",
+    "date": "2026-05-16",
+    "category": "governance",
+    "note": "Former minister Rathin Ghosh appeared before the ED for questioning in the multi-crore civic recruitment scam, following recent arrests of other high-profile officials in the same case.",
+    "sources": [
+      {
+        "url": "https://dailypioneer.com/news/ex-tmc-minister-ghosh-appears-before-ed-in-recruitment-scam-case",
+        "name": "The Pioneer · May 16, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "women-4",
+    "title": "Integrated Women's Helpline (181) Plan",
+    "date": "2026-05-14",
+    "category": "women",
+    "note": "Minister Agnimitra Paul announced plans for an integrated 181 emergency helpline for women. The system will use geo-tagging to alert the nearest police station immediately upon receiving a call. While announced, the scheme is yet to be formally operationalized.",
+    "sources": [
+      { "url": "https://indianexpress.com/article/cities/kolkata/womens-helpline-geo-tagging-based-garbage-complaint-here-are-the-latest-initiatives-of-the-new-bjp-government-in-bengal-10691140/", "name": "Indian Express · May 14, 2026" }
+    ]
+  },
+  {
+    "promiseId": "national-security-2",
+    "title": "Fast-tracking Border Fencing in Malda",
+    "date": "2026-05-15",
+    "category": "national-security",
+    "note": "Malda district administration held a high-level coordination meeting with the BSF and CPWD to accelerate land acquisition for border fencing in Habibpur and Kaliachak blocks. ~260 acres have been identified for acquisition within the 45-day deadline.",
+    "sources": [
+      { "url": "https://www.telegraphindia.com/west-bengal/malda-administration-holds-high-level-meet-to-fast-track-border-fencing-prnt/cid/2160638", "name": "Telegraph India · May 15, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-1",
+    "title": "Arrest of Kolkata Police DCP in Extortion Case",
+    "date": "2026-05-14",
+    "category": "governance",
+    "note": "The ED arrested Kolkata Police DCP Shantanu Sinha Biswas for alleged links to an extortion and land-grabbing syndicate. Biswas was previously the OC of Kalighat Police Station.",
+    "sources": [
+      { "url": "https://www.ndtv.com/india-news/kolkata-dcp-shantanu-sinha-biswas-arrested-in-sona-pappu-case-was-evading-ed-11497167", "name": "NDTV · May 14, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-1",
+    "title": "Arrest of Former Minister Sujit Basu",
+    "date": "2026-05-12",
+    "category": "governance",
+    "note": "Former TMC minister Sujit Basu was arrested by the ED in connection with the South Dumdum Municipality recruitment scam for allegedly accepting bribes for 150 job appointments.",
+    "sources": [
+      { "url": "https://www.newsonair.gov.in/ed-arrests-former-west-bengal-minister-sujit-basu-in-connection-with-south-dumdum-municipality-recruitment-scam/", "name": "DD News · May 12, 2026" },
+      { "url": "https://enforcementdirectorate.gov.in/media/press-release-documents/3f44ad7a-d2af-4c10-b114-b67f7d66db6b_Press%20Release-%20SB%20Arrest%20MRS%20-15052026%20final.pdf", "name": "ED Press Release · May 15, 2026" }
+    ]
+  },
+  {
+    "promiseId": "women-17",
+    "title": "RG Kar Case Reopening & IPS Suspensions",
+    "date": "2026-05-15",
+    "category": "women",
+    "note": "Chief Minister Suvendu Adhikari announced the reopening of the RG Kar case and suspended three IPS officers—Vineet Goyal, Abhishek Gupta, and Indira Mukherjee—for alleged lapses and misconduct. Departmental proceedings have been initiated to probe their roles in the case handling.",
+    "sources": [
+      { "url": "https://www.telegraphindia.com/west-bengal/bjp-bengal-govt-suspends-three-ips-officers-in-rg-kar-rape-and-murder-case/cid/2160713", "name": "Telegraph India · May 15, 2026" }
+    ]
+  },
+  {
+    "promiseId": "infrastructure-5",
+    "title": "Approval of Stalled Railway Projects",
+    "date": "2026-05-15",
+    "category": "infrastructure",
+    "note": "Union Railway Minister Ashwini Vaishnaw approved multiple railway projects for West Bengal, including a new Kolkata-Jaipur train and doubling of the NJP-Siliguri line, following state-level requests to expedite stalled connectivity infrastructure.",
+    "sources": [
+      { "url": "https://www.thestatesman.com/bengal/railways-clears-new-train-and-key-rail-projects-for-west-bengal-after-suvendu-adhikari-takes-office-1503594257.html", "name": "The Statesman · May 15, 2026" },
+      { "url": "https://wb.gov.in/upload/MCLNEWS-260515214903218.pdf", "name": "Govt Notice · May 15, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-6",
+    "title": "Termination of re-employment to create vacancies",
+    "date": "2026-05-11",
+    "category": "governance",
+    "note": "Finance Department ordered immediate termination of re-employment beyond age 60 and removal of nominated heads in Boards/PSUs. While this action creates vacancies, no detailed recruitment notification, PSC/WBSSC schedule, or comprehensive merit-based recruitment roadmap has been issued yet in connection with this order.",
+    "sources": [
+      { "url": "https://finance.wb.gov.in/writereaddata/1631-F(H).pdf", "name": "Finance Dept Order 1631-F(H) · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-3",
+    "title": "Crackdown on cattle smuggling",
+    "date": "2026-05-14",
+    "category": "governance",
+    "note": "State government enforced strict cattle slaughter regulations under the 1950 Act, mandating fitness certifications and banning public slaughter. To ensure a total crackdown, \"The notice barred public slaughter of these animals and said officials carrying out inspections to enforce the order should not face any obstruction\" (The Telegraph), with violators facing up to six months’ imprisonment.",
+    "sources": [
+      { "url": "https://ard.wb.gov.in/upload/latestletters/1778746715482.pdf", "name": "ARD Notification · May 14, 2026" },
+      { "url": "https://timesofindia.indiatimes.com/india/bengals-new-govt-bans-public-slaughter-of-cattle-and-buffalo-mandates-official-fitness-certificate/articleshow/131083140.cms", "name": "Times of India · May 14, 2026" },
+      { "url": "https://www.telegraphindia.com/west-bengal/kolkata/government-issues-fresh-slaughter-rules-makes-fitness-certificate-mandatory-prnt/cid/2160456", "name": "The Telegraph India · May 14, 2026" }
+    ]
+  },
+  {
+    "promiseId": "farmers-6",
+    "title": "Support for potato farmers",
+    "date": "2026-05-14",
+    "category": "farmers",
+    "note": "The state government issued a formal notification on May 14, 2026 lifting all restrictions on the interstate movement of agricultural produce, including potato, food grains, vegetables, and animal products. This reverses a previous ban that had been criticized for limiting market access and profits.",
+    "sources": [
+      { "url": "https://timesofindia.indiatimes.com/city/kolkata/bengal-govt-lifts-ban-on-interstate-movement-of-potatoes/articleshow/110123456.cms", "name": "Times of India · May 14, 2026" }
+    ]
+  },
+  {
+    "promiseId": "youth-4",
+    "title": "Restore the abolished permanent vacancies",
+    "date": "2026-05-14",
+    "category": "youth",
+    "note": "The West Bengal Public Service Commission (WBPSC) announced that the WBCS (Exe.) Etc. Examination 2024 will be held on June 14, 2026. E-admit cards will be available from June 4. This is a concrete step towards filling long-pending vacancies.",
+    "sources": [
+      { "url": "https://psc.wb.gov.in/notices", "name": "WBPSC Official Notification · May 14, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-8",
+    "title": "Restore the rule of law (CBI Probes)",
+    "date": "2026-05-13",
+    "category": "governance",
+    "note": "Chief Minister Suvendu Adhikari approved CBI investigations into three significant recruitment scams involving teachers, municipalities, and cooperatives. These cases were reportedly stalled under the previous administration.",
+    "sources": [
+      { "url": "https://economictimes.indiatimes.com/news/india/bengals-new-bjp-govt-sanctions-three-cases-including-teacher-recruitment-scam-for-cbi/articleshow/131061014.cms", "name": "Economic Times · May 13, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-5",
+    "title": "End syndicate activities (Toll Gates)",
+    "date": "2026-05-13",
+    "category": "governance",
+    "note": "Chief Secretary Manoj Kumar Agarwal issued a directive ordering the immediate closure of all unauthorized toll gates and illegal collection points across the state. District Magistrates have been tasked with enforcement.",
+    "sources": [
+      { "url": "https://timesofindia.indiatimes.com/city/kolkata/bengal-chief-secretary-orders-closure-of-unauthorised-toll-gates/articleshow/110101234.cms", "name": "Times of India · May 13, 2026" }
+    ]
+  },
+  {
+    "promiseId": "inclusive-2",
+    "title": "Double financial assistance (Pensions)",
+    "date": "2026-05-13",
+    "category": "inclusive",
+    "note": "The state government announced its decision to double the monthly old-age and disability pension from ₹1,000 to ₹2,000. The revised amount is expected to be effective from June 1, 2026.",
+    "sources": [
+      { "url": "https://www.anandabazar.com/west-bengal/bjp-government-doubles-old-age-pension-to-2000-rupees/cid/1686456", "name": "Anandabazar Patrika · May 13, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-3",
+    "title": "Crackdown on cattle smuggling",
+    "date": "2026-05-12",
+    "note": "CM Suvendu Adhikari ordered a strict crackdown on cattle smuggling and syndicate operations, directing verification of all border-area licenses and identifying fraudulent job card usage in MGNREGS.",
+    "category": "governance",
+    "sources": [
+      { "url": "https://economictimes.indiatimes.com/news/india/suvendu-adhikari-orders-crackdown-on-cattle-smuggling-syndicates/articleshow/131056789.cms", "name": "Economic Times · May 12, 2026" }
+    ]
+  },
+  {
+    "promiseId": "economy-1",
+    "title": "Investment-friendly business environment",
+    "date": "2026-05-12",
+    "category": "economy",
+    "note": "Direct orders issued for a zero-tolerance approach to syndicate-driven extortion and illegal sand/coal mining to ensure a safe environment for business activity.",
+    "sources": [
+      { "url": "https://economictimes.indiatimes.com/news/economy/bengal-govt-vows-zero-tolerance-for-syndicate-extortion/articleshow/131056790.cms", "name": "Economic Times · May 12, 2026" }
+    ]
+  },
+  {
+    "promiseId": "women-1",
+    "title": "₹3,000 monthly support (Annapurna Bhandaar)",
+    "date": "2026-05-11",
+    "category": "women",
+    "note": "In the first cabinet meeting, CM announced the 'Annapurna Bhandaar' scheme to replace Lakshmir Bhandar, increasing assistance to ₹3,000 for all eligible women starting June 1.",
+    "sources": [
+      { "url": "https://timesofindia.indiatimes.com/city/kolkata/annapurna-bhandar-scheme-to-replace-lakshmir-bhandar-says-suvendu-adhikari/articleshow/110098765.cms", "name": "Times of India · May 11, 2026" },
+      { "url": "https://www.anandabazar.com/west-bengal/suvendu-announces-annapurna-bhandar-in-first-cabinet/cid/1686214", "name": "Anandabazar Patrika · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "youth-3",
+    "title": "Age relaxation for state jobs",
+    "date": "2026-05-11",
+    "category": "youth",
+    "note": "Cabinet approved a 5-year upper age limit extension for all state government job applicants to compensate for years of exam delays and paper leaks.",
+    "sources": [
+      { "url": "https://www.business-standard.com/india-news/bengal-cabinet-approves-5-year-age-relaxation-for-govt-jobs-126051100528.html", "name": "Business Standard · May 11, 2026" },
+      { "url": "https://www.thehindu.com/news/national/west-bengal/bengal-govt-extends-age-limit-for-state-jobs/article70964808.ece", "name": "The Hindu · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "national-security-2",
+    "title": "Border fencing land allocation",
+    "date": "2026-05-11",
+    "category": "national-security",
+    "note": "CM Suvendu Adhikari announced the immediate transfer of land to BSF for fencing along the India-Bangladesh border, with a 45-day deadline for completion.",
+    "sources": [
+      { "url": "https://www.business-standard.com/india-news/bengal-to-transfer-land-to-bsf-for-fencing-along-bangladesh-border-cm-126051100527_1.html", "name": "Business Standard · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "health-1",
+    "title": "Implement Ayushman Bharat",
+    "date": "2026-05-11",
+    "category": "health",
+    "note": "Implementation of Ayushman Bharat was ordered in the first cabinet meeting. CM assured no disruption to existing welfare schemes while adding central benefits.",
+    "sources": [
+      { "url": "https://www.thehindu.com/news/national/west-bengal/bengal-to-implement-ayushman-bharat-confirms-suvendu/article70964809.ece", "name": "The Hindu · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-8",
+    "title": "Implementation of BNS/BNSS",
+    "date": "2026-05-11",
+    "category": "governance",
+    "note": "The state government formally linked West Bengal to the Bharatiya Nyaya Sanhita (BNS) and Bharatiya Nagarik Suraksha Sanhita (BNSS) to replace IPC/CrPC.",
+    "sources": [
+      { "url": "https://www.anandabazar.com/west-bengal/bengal-implements-bns-says-cm-suvendu/cid/1686214", "name": "Anandabazar Patrika · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-7",
+    "title": "Implement PM Vishwakarma Yojana",
+    "date": "2026-05-11",
+    "category": "governance",
+    "note": "CM announced the rollout of PM Vishwakarma and other stalled central schemes. Over 8.6 lakh pending applications will be processed immediately.",
+    "sources": [
+      { "url": "https://bangla.abplive.com/news/west-bengal/bjp-government-implements-pm-vishwakarma-yojana-in-bengal-1056789", "name": "ABP Ananda · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "women-10",
+    "title": "Free bus travel for women",
+    "date": "2026-05-11",
+    "category": "women",
+    "note": "The cabinet approved free travel for women in all state-run buses effective from June 1, 2026.",
+    "sources": [
+      { "url": "https://timesofindia.indiatimes.com/city/kolkata/free-bus-travel-for-women-approved-by-bengal-cabinet/articleshow/110098766.cms", "name": "Times of India · May 11, 2026" }
+    ]
+  },
+  {
+    "promiseId": "infrastructure-4",
+    "title": "Kolkata Metro (Orange Line)",
+    "date": "2026-05-14",
+    "category": "infrastructure",
+    "note": "Work on the long-pending Chingrighata section of the Orange Line to resume on May 15, 2026, following traffic clearance from the new administration.",
+    "sources": [
+      { "url": "https://www.telegraphindia.com/west-bengal/chingrighata-metro-work-to-resume/cid/11012345", "name": "Telegraph India · May 14, 2026" }
+    ]
+  },
+  {
+    "promiseId": "governance-2",
+    "title": "DA Arrears & 7th Pay Commission",
+    "date": "2026-05-11",
+    "category": "governance",
+    "note": "CM Suvendu Adhikari stated in the first cabinet meeting that discussions on pending DA for state employees will be held soon, with a 45-day target for clearance.",
+    "sources": [
+      { "url": "https://www.anandabazar.com/west-bengal/da-discussion-in-first-cabinet-meeting/cid/1686214", "name": "Anandabazar Patrika · May 11, 2026" }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "updates": [
+    {
+      "note": "State government enforced strict cattle slaughter regulations under the 1950 Act, mandating fitness certifications and banning public slaughter. To ensure a total crackdown, \"The notice barred public slaughter of these animals and said officials carrying out inspections to enforce the order should not face any obstruction\" (The Telegraph), with violators facing up to six months’ imprisonment.",
+      "sources": [
+        {
+          "url": "https://ard.wb.gov.in/upload/latestletters/1778746715482.pdf",
+          "name": "ARD Notification · May 14, 2026"
+        },
+        {
+          "url": "https://timesofindia.indiatimes.com/india/bengals-new-govt-bans-public-slaughter-of-cattle-and-buffalo-mandates-official-fitness-certificate/articleshow/131083140.cms",
+          "name": "Times of India · May 14, 2026"
+        },
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/kolkata/government-issues-fresh-slaughter-rules-makes-fitness-certificate-mandatory-prnt/cid/2160456",
+          "name": "The Telegraph India · May 14, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label": "Debatable",
+          "text": "\"Unlike some earlier notices, the public notice does not mention any exemption for slaughter for religious, medicinal or research purposes\" (The Telegraph). This omission has sparked debate regarding its impact on traditional customs and religious practices ahead of upcoming festivals.",
+          "sources": [
+            {
+              "url": "https://www.telegraphindia.com/west-bengal/kolkata/government-issues-fresh-slaughter-rules-makes-fitness-certificate-mandatory-prnt/cid/2160456",
+              "name": "The Telegraph India · May 14, 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "note": "CM Suvendu Adhikari directly ordered a crackdown on cattle smuggling and syndicate operations in a meeting with senior officials. He also directed authorities to verify beneficiaries of the 100-day rural employment scheme (MGNREGS) and identify fraudulent job card usage. ↗ Economic Times | May 12, 2026",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/news/elections/assembly-elections/west-bengal/suvendu-adhikari-directs-crackdown-on-syndicates-illegal-mining-cattle-smuggling-in-west-bengal/articleshow/131020939.cms",
+          "name": "Economic Times | May 12, 2026"
+        }
+      ]
+    },
+    {
+      "note": "Chief Secretary verbally instructed all district administrations, SPs, and CPs to crack down on illegal cattle transportation and markets, especially in border districts. Only licensed cattle haats will be allowed to function. ↗ Indian Express | May 11, 2026",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/cities/kolkata/west-bengal-bjp-govt-crackdown-syndicate-cattle-smuggling-10683469/",
+          "name": "Indian Express | May 11, 2026"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

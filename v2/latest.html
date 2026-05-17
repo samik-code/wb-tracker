@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Record — West Bengal Promise Tracker 2026–2031</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background: var(--paper); }
+    .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Space Mono', monospace;
+        font-size: 11px;
+        color: var(--ink-blue);
+        text-decoration: none;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 0.2s;
+    }
+    .back-home:hover { color: var(--saffron-dark); transform: translateX(-4px); }
+    
+    .archive-item { cursor: default; }
+    .archive-item:hover { transform: none; }
+    
+    .item-sources {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-top: 1px solid var(--rule-light);
+        padding-top: 12px;
+    }
+    .archive-source-link {
+        font-family: 'Space Mono', monospace;
+        font-size: 9px;
+        color: var(--ink-blue);
+        text-decoration: none;
+        background: rgba(0, 71, 171, 0.04);
+        padding: 4px 8px;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 71, 171, 0.1);
+        transition: all 0.2s;
+    }
+    .archive-source-link:hover {
+        background: rgba(0, 71, 171, 0.08);
+        border-color: var(--ink-blue);
+    }
+
+    .load-more-wrap {
+        text-align: center;
+        margin-top: 40px;
+        padding-bottom: 80px;
+    }
+    .load-more-btn {
+        background: var(--surface);
+        border: 1px solid var(--rule);
+        padding: 12px 32px;
+        font-family: 'Space Mono', monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        border-radius: 4px;
+    }
+    .load-more-btn:hover {
+        background: var(--paper-warm);
+        border-color: var(--saffron);
+        color: var(--saffron);
+    }
+    .archive-item-title {
+        color: var(--ink-blue);
+        text-decoration: none;
+    }
+    .archive-item-title:hover {
+        text-decoration: underline;
+    }
+    .non-manifesto-badge {
+        display: inline-block;
+        background: #fdf2f2;
+        color: #9b1c1c;
+        border: 1px solid #f8b4b4;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: 'Space Mono', monospace;
+        font-size: 8px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="archive-container">
+    <a href="index.html" class="back-home">← Back to Dashboard</a>
+    
+    <header class="archive-header">
+      <h1 class="archive-title">Public Record</h1>
+      <p style="font-family:'Crimson Pro', serif; font-size: 18px; color: var(--ink-faint);">
+        A chronological archive of every administrative update and policy development.
+      </p>
+    </header>
+
+    <div class="archive-timeline" id="archive-timeline">
+        <div class="loading">Loading archive...</div>
+    </div>
+
+    <div class="load-more-wrap" id="load-more-container" style="display:none;">
+        <button class="load-more-btn" id="load-more-btn">Load More Updates</button>
+    </div>
+  </div>
+
+  <script>
+    let allUpdates = [];
+    let displayedCount = 0;
+    const ITEMS_PER_PAGE = 20;
+
+    async function init() {
+        try {
+            const [updatesRes, initiativesRes] = await Promise.all([
+                fetch('data/updates.json'),
+                fetch('data/initiative_updates.json')
+            ]);
+            
+            let updates = [];
+            let initiatives = [];
+            
+            if(updatesRes.ok) updates = await updatesRes.json();
+            if(initiativesRes.ok) initiatives = await initiativesRes.json();
+            
+            // Mark initiatives so we can link them differently
+            initiatives = initiatives.map(i => ({ ...i, isInitiative: true }));
+            
+            allUpdates = [...updates, ...initiatives];
+            
+            // Sort by date desc
+            allUpdates.sort((a, b) => b.date.localeCompare(a.date));
+            
+            renderNextBatch();
+            
+            document.getElementById('load-more-btn').addEventListener('click', renderNextBatch);
+        } catch(e) {
+            console.error(e);
+            document.getElementById('archive-timeline').innerHTML = '<div class="loading error-state">Failed to load archive.</div>';
+        }
+    }
+
+    function renderNextBatch() {
+        const timeline = document.getElementById('archive-timeline');
+        if (displayedCount === 0) timeline.innerHTML = '';
+        
+        const nextBatch = allUpdates.slice(displayedCount, displayedCount + ITEMS_PER_PAGE);
+        
+        // Group by date for the new batch
+        const groups = nextBatch.reduce((acc, u) => {
+            if(!acc[u.date]) acc[u.date] = [];
+            acc[u.date].push(u);
+            return acc;
+        }, {});
+
+        Object.keys(groups).sort((a, b) => b.localeCompare(a)).forEach(date => {
+            const formattedDate = new Date(date).toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'long', year: 'numeric'
+            });
+            
+            // Check if date label already exists in timeline
+            let dayGroup = document.querySelector(`[data-date="${date}"]`);
+            if (!dayGroup) {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'archive-day-group';
+                groupDiv.setAttribute('data-date', date);
+                groupDiv.innerHTML = `<span class="archive-date-label">${formattedDate}</span><div class="items-container"></div>`;
+                timeline.appendChild(groupDiv);
+                dayGroup = groupDiv;
+            }
+            
+            const container = dayGroup.querySelector('.items-container');
+            groups[date].forEach(u => {
+                const item = document.createElement('div');
+                item.className = 'archive-item';
+                const linkHref = u.isInitiative ? `initiatives.html#${u.promiseId}` : `index.html#${u.promiseId}`;
+                const tag = u.isInitiative ? '<span class="non-manifesto-badge" style="margin-bottom:8px; display:inline-block">Non-Manifesto Initiative</span><br>' : '';
+                
+                item.innerHTML = `
+                    ${tag}
+                    <span class="archive-item-meta">${u.category.replace('-', ' ')}</span>
+                    <a href="${linkHref}" class="archive-item-title">${u.title}</a>
+                    <div class="archive-item-note">${u.note}</div>
+                    ${u.sources ? `
+                        <div class="item-sources">
+                            ${u.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                `;
+                container.appendChild(item);
+            });
+        });
+
+        displayedCount += nextBatch.length;
+        
+        const loadMoreContainer = document.getElementById('load-more-container');
+        if (displayedCount < allUpdates.length) {
+            loadMoreContainer.style.display = 'block';
+        } else {
+            loadMoreContainer.style.display = 'none';
+        }
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

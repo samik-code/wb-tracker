@@ -1,0 +1,67 @@
+[
+  {
+    "id": "update-1",
+    "category": "infrastructure",
+    "title": "Geo-tagged Garbage Complaint App",
+    "text": "A technology-driven mobile application for citizens to report garbage accumulation in real-time with 2-hour cleanup target.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "Minister Agnimitra Paul announced a new geo-tagged mobile app for real-time reporting of garbage and civic issues.",
+      "date": "2026-05-14",
+      "sourceCount": 1
+    }
+  },
+  {
+    "id": "update-2",
+    "category": "education",
+    "title": "Mandatory Vande Mataram in Schools",
+    "text": "Mandatory singing of 'Vande Mataram' during school assembly prayers across all state-run and aided schools.",
+    "status": "done",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "School Education Dept issued Order No. 607-SED making Vande Mataram mandatory in all school assemblies.",
+      "date": "2026-05-14",
+      "sourceCount": 1
+    }
+  },
+  {
+    "id": "update-3",
+    "category": "governance",
+    "title": "Caste Certificate Re-verification",
+    "text": "Re-verification of all SC/ST/OBC caste certificates issued since 2011 to identify and cancel fraudulent ones.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "West Bengal government ordered the re-verification of all caste certificates issued since 2011 to address irregularities.",
+      "date": "2026-05-16",
+      "sourceCount": 2
+    }
+  },
+  {
+    "id": "update-4",
+    "category": "infrastructure",
+    "title": "Handover of NH Stretches to NHAI",
+    "text": "Handover of seven national highway (NH) stretches, totaling 196 km, to NHAI and NHIDCL for modernization and widening.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "West Bengal government approved the handover of seven national highway stretches (totaling ~196 km) to NHAI and NHIDCL.",
+      "date": "2026-05-16",
+      "sourceCount": 2
+    }
+  },
+  {
+    "id": "update-5",
+    "category": "governance",
+    "title": "Assembly Live Streaming Proposal",
+    "text": "Proposal by Chief Minister Suvendu Adhikari for live streaming of Assembly proceedings, including Question Hour, debates, bills, and budget sessions, to ensure legislative transparency.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "CM Suvendu Adhikari proposed live streaming of Question Hour, debates, bills, and budget sessions for legislative transparency.",
+      "date": "2026-05-16",
+      "sourceCount": 1
+    }
+  }
+]
