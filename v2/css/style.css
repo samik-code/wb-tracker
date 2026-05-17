@@ -33,7 +33,7 @@
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 html {
@@ -2063,7 +2063,15 @@ a:hover {
   }
 
   .cat-header {
-    /* Not sticky */
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .cat-stats {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 34px;
+    margin-top: 4px;
   }
 
   .category {
