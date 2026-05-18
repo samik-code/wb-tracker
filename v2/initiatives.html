@@ -167,6 +167,24 @@
         }
     }
 
+    function escapeHtml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[char]));
+    }
+
+    function formatMultiParagraph(text) {
+        if (!text) return '';
+        return String(text)
+            .split(/\n\s*\n/)
+            .map(p => `<p>${escapeHtml(p.trim())}</p>`)
+            .join('');
+    }
+
     function renderBatch(count) {
         const timeline = document.getElementById('initiatives-timeline');
         if (displayedCount === 0) timeline.innerHTML = '';
@@ -208,7 +226,7 @@
                     <span class="non-manifesto-badge">Non-Manifesto Initiative</span>
                     <span class="archive-item-meta">${u.category.replace('-', ' ')}</span>
                     <span class="archive-item-title">${u.title}</span>
-                    <div class="archive-item-note">${u.note}</div>
+                    <div class="archive-item-note">${formatMultiParagraph(u.note)}</div>
                     ${u.sources ? `
                         <div class="item-sources">
                             ${u.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}

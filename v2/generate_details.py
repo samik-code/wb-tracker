@@ -11,6 +11,12 @@ def clean_note(note):
     # Remove any trailing arrows or Unicode characters that were remnants from v1 formatting
     return re.sub(r'\s*(?:↗|\u00e2\u2020\u2014)[^\n]*$', '', str(note)).strip()
 
+def format_note_text(text):
+    if not text:
+        return ""
+    paras = re.split(r'\n\s*\n', str(text).strip())
+    return "".join(f"<p>{escape_html(p.strip())}</p>" for p in paras if p.strip())
+
 def format_status(status):
     if status == 'done':
         return '✓ Fulfilled'
@@ -177,7 +183,7 @@ def main():
                             nested_counter_html += f"""
                 <div class="counter-block" style="margin-top: 16px; border-radius: 4px;">
                   <span class="counter-label">🛑 Counter Evidence: {escape_html(nc.get('label', 'Debatable'))}</span>
-                  <div class="detail-timeline-note" style="font-size: 15px;">{escape_html(nc_note)}</div>
+                  <div class="detail-timeline-note" style="font-size: 15px;">{format_note_text(nc_note)}</div>
                   {nc_sources_html}
                 </div>
 """
@@ -203,7 +209,7 @@ def main():
               {f'<span class="detail-timeline-date">{escape_html(date_label)}</span>' if date_label else ''}
             </div>
             <div class="detail-timeline-note">
-              {escape_html(note_text)}
+              {format_note_text(note_text)}
             </div>
             {nested_counter_html}
             {sources_html}
@@ -238,7 +244,7 @@ def main():
                     html += f"""
         <div class="counter-block" style="border-radius: 6px; padding: 24px;">
           <span class="counter-label" style="font-size: 11px;">🛑 Counter Evidence: {escape_html(gc.get('label', 'Contradicted'))}</span>
-          <div class="detail-timeline-note">{escape_html(gc_note)}</div>
+          <div class="detail-timeline-note">{format_note_text(gc_note)}</div>
           {gc_sources_html}
         </div>
 """

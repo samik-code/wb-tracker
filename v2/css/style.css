@@ -1236,6 +1236,17 @@ a:hover {
   margin-bottom: 8px;
 }
 
+.update-note p,
+.detail-timeline-note p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.update-note p:last-child,
+.detail-timeline-note p:last-child {
+  margin-bottom: 0;
+}
+
 .source-list {
   display: flex;
   flex-wrap: wrap;
@@ -1976,6 +1987,15 @@ a:hover {
   font-size: 16px;
   line-height: 1.5;
   color: var(--ink-mid);
+}
+
+.archive-item-note p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.archive-item-note p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 600px) {

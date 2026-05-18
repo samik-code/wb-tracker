@@ -257,10 +257,9 @@ function closeMobileNav() {
 
 function renderStats() {
   const allPromises = window.siteData.promises;
-  const filtered = filterPromises(allPromises);
-  const total = filtered.length;
+  const total = allPromises.length;
   const counts = { done: 0, inprogress: 0, evaded: 0, pending: 0 };
-  filtered.forEach((p) => { counts[p.status] += 1; });
+  allPromises.forEach((p) => { counts[p.status] += 1; });
 
   document.getElementById('stat-total').textContent = total;
   document.getElementById('stat-done').textContent = counts.done;
@@ -268,7 +267,7 @@ function renderStats() {
   document.getElementById('stat-evaded').textContent = counts.evaded;
   document.getElementById('stat-pending').textContent = counts.pending;
 
-  // Completion rate
+  // Completion rate (always based on all promises)
   const pct = total > 0 ? Math.round((counts.done / total) * 100) : 0;
   const pctEl = document.getElementById('stat-pct');
   if (pctEl) pctEl.textContent = pct + '%';
@@ -707,6 +706,15 @@ async function togglePromiseDetails(id, forceOpen = false) {
     let html = '<div class="update-timeline">';
     const cleanNote = (note) => String(note || '').replace(/\s*(?:↗|\u00e2\u2020\u2014)[^\n]*$/g, '').trim();
 
+    // Helper to escape HTML and format multi-paragraph text
+    const formatMultiParagraph = (text) => {
+      if (!text) return '';
+      return String(text)
+        .split(/\n\s*\n/)
+        .map(p => `<p>${escapeHtml(p.trim())}</p>`)
+        .join('');
+    };
+
     const isOverflow = (promise.status === 'inprogress' && data.updates.length > 5);
     const displayUpdates = isOverflow ? data.updates.slice(0, 3) : data.updates;
 
@@ -725,7 +733,7 @@ async function togglePromiseDetails(id, forceOpen = false) {
               <span class="update-badge">Update ${updateNumber}</span>
               ${dateLabel ? `<span class="update-date">${escapeHtml(dateLabel)}</span>` : ''}
             </div>
-            <div class="update-note">${escapeHtml(noteText)}</div>
+            <div class="update-note">${formatMultiParagraph(noteText)}</div>
             ${sources.length ? `<div class="source-list">
               ${sources.map((s) => `<a class="source-link" href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name)}</a>`).join('')}
             </div>` : ''}
@@ -739,7 +747,7 @@ async function togglePromiseDetails(id, forceOpen = false) {
             updateHtml += `
               <div class="counter-block" style="margin-top: 12px;">
                 <span class="counter-label">🛑 Counter evidence: ${escapeHtml(c.label || '')}</span>
-                <div class="update-note">${escapeHtml(cNoteText)}</div>
+                <div class="update-note">${formatMultiParagraph(cNoteText)}</div>
                 ${cSources.length ? `<div class="source-list" style="margin-top:8px">
                   ${cSources.map((s) => `<a class="source-link" href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name)}</a>`).join('')}
                 </div>` : ''}
@@ -770,7 +778,7 @@ async function togglePromiseDetails(id, forceOpen = false) {
         html += `
           <div class="counter-block">
             <span class="counter-label">🛑 Counter evidence: ${escapeHtml(c.label || '')}</span>
-            <div class="update-note">${escapeHtml(noteText)}</div>
+            <div class="update-note">${formatMultiParagraph(noteText)}</div>
             ${sources.length ? `<div class="source-list" style="margin-top:8px">
               ${sources.map((s) => `<a class="source-link" href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.name)}</a>`).join('')}
             </div>` : ''}

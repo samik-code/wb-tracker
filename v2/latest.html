@@ -154,6 +154,24 @@
         }
     }
 
+    function escapeHtml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[char]));
+    }
+
+    function formatMultiParagraph(text) {
+        if (!text) return '';
+        return String(text)
+            .split(/\n\s*\n/)
+            .map(p => `<p>${escapeHtml(p.trim())}</p>`)
+            .join('');
+    }
+
     function renderNextBatch() {
         const timeline = document.getElementById('archive-timeline');
         if (displayedCount === 0) timeline.innerHTML = '';
@@ -194,7 +212,7 @@
                     ${tag}
                     <span class="archive-item-meta">${u.category.replace('-', ' ')}</span>
                     <a href="${linkHref}" class="archive-item-title">${u.title}</a>
-                    <div class="archive-item-note">${u.note}</div>
+                    <div class="archive-item-note">${formatMultiParagraph(u.note)}</div>
                     ${u.sources ? `
                         <div class="item-sources">
                             ${u.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
