@@ -1,0 +1,43 @@
+{
+  "updates": [
+    {
+      "note": "Chief Minister Suvendu Adhikari issued administrative directives to the Howrah police and the RPF to bypass judicial courts and send detected illegal Bangladeshi immigrants not covered by the CAA directly to BSF outposts for deportation. A weekly report of all individuals handed over to the BSF must be submitted to the CMO via the DGP. The status of this commitment remains in progress as enforcement structures are active.",
+      "sources": [
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/diktat-for-rail-cops-hand-over-bangladesh-immigrants-barring-caa-exempted-to-bsf-prnt/cid/2161747",
+          "name": "Telegraph India · May 22, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label": "Debatable",
+          "text": "Senior state police officials expressed concern that bypassing judicial courts to hand individuals directly to the BSF may conflict with Section 14(A) of the Foreigners Act, 1946, which requires suspected illegal immigrants to be produced before a court to verify their legal status.",
+          "sources": [
+            {
+              "url": "https://www.telegraphindia.com/west-bengal/diktat-for-rail-cops-hand-over-bangladesh-immigrants-barring-caa-exempted-to-bsf-prnt/cid/2161747",
+              "name": "Telegraph India · May 22, 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "note": "Chief Minister Suvendu Adhikari announced the immediate rollout of the 'Detect, Delete, and Deport' model to address illegal immigration. Directives have been issued to the state police to identify and detain illegal infiltrators, who will then be handed over directly to the Border Security Force (BSF) for deportation proceedings. The policy explicitly exempts refugees from the seven communities protected under the Citizenship (Amendment) Act (CAA) who entered India on or before December 31, 2024.",
+      "sources": [
+        {
+          "url": "https://www.ptinews.com/story/national/bengal-hands-over-land-to-bsf-for-border-fencing-suvendu-rolls-out-detect-delete-deport-push/3686867",
+          "name": "PTI · May 20, 2026"
+        },
+        {
+          "url": "https://www.newsonair.gov.in/wb-govt-announces-deportation-proceedings-against-illegal-bangladeshi-infiltrators/",
+          "name": "News On AIR · May 20, 2026"
+        },
+        {
+          "url": "https://timesofindia.indiatimes.com/city/kolkata/detected-and-deleted-infiltrators-will-be-deported-soon-suvendu/articleshow/131185369.cms",
+          "name": "Times of India · May 20, 2026"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

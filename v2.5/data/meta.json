@@ -1,0 +1,123 @@
+{
+  "title": "WB Accountability Tracker - Checking BJP Sarkar Promises",
+  "subtitle": "West Bengal's public ledger, checking BJP Sarkar Promises — tracking every commitment made to the people, 2026–2031",
+  "oathDate": "2026-05-09T11:00:00+05:30",
+  "termEnd": "2031-05-09T11:00:00+05:30",
+  "chiefMinister": "Suvendu Adhikari",
+  "oathCeremony": "9 May 2026, Brigade Parade Ground",
+  "seatsWon": "207 / 294",
+  "governor": "RN Ravi",
+  "lastUpdated": "22 May 2026",
+  "canonicalUrl": "https://bjp-govt-wb.pages.dev/",
+  "manifestoUrl": "https://www.bjp.org/files/election-manifesto-documents/Bhoroshar-Shopoth-EN-WB.pdf",
+  "submitUrl": "https://tally.so/r/ja5B74",
+  "sourceCodeUrl": "https://pastebin.com/raw/56SxjWNb",
+  "ogImage": "og-preview.webp",
+  "categories": [
+    {
+      "id": "national-security",
+      "icon": "🛡",
+      "title": "National Security",
+      "subtitle": "Border fencing · Infiltration crackdown",
+      "bengali": ""
+    },
+    {
+      "id": "governance",
+      "icon": "🏛",
+      "title": "Governance & Rule of Law",
+      "subtitle": "White Paper · DA arrears · Anti-corruption · UCC · Recruitment",
+      "bengali": ""
+    },
+    {
+      "id": "women",
+      "icon": "👩",
+      "title": "Women's Safety & Empowerment",
+      "subtitle": "Nari Surokkha Dorkar · ₹3,000/month · 33% reservation · Free HPV",
+      "bengali": ""
+    },
+    {
+      "id": "youth",
+      "icon": "🎓",
+      "title": "Youth & Employment",
+      "subtitle": "Yuboder Ujjwol Bhobishyot — 1 crore jobs · Startup credit · Sports University · AVGC Labs",
+      "bengali": ""
+    },
+    {
+      "id": "economy",
+      "icon": "🏭",
+      "title": "Economy & Industry",
+      "subtitle": "Arthanitir Unnoti — Singur industrial park · Haldia port · MSME · Jute · Steel · Coastal zones",
+      "bengali": ""
+    },
+    {
+      "id": "tea",
+      "icon": "🍵",
+      "title": "Tea Industry",
+      "subtitle": "Darjeeling Tea · Replantation · GI enforcement · Tea tourism · Small growers",
+      "bengali": ""
+    },
+    {
+      "id": "farmers",
+      "icon": "🌾",
+      "title": "Farmers & Rural Economy",
+      "subtitle": "Krishoker Unnoyon — ₹9,000 PM Kisan · MSP ₹3,100 · Cold storage · Dairy · GI products",
+      "bengali": ""
+    },
+    {
+      "id": "fishery",
+      "icon": "🐟",
+      "title": "Fishery & Blue Economy",
+      "subtitle": "PM Matsya Sampada · Deep-sea fishing · Marine biotech · Coastal women's livelihood",
+      "bengali": ""
+    },
+    {
+      "id": "health",
+      "icon": "🏥",
+      "title": "Health",
+      "subtitle": "Suswastho — Ayushman Bharat · AIIMS North Bengal · Cancer hospital · 24-hr healthcare",
+      "bengali": ""
+    },
+    {
+      "id": "education",
+      "icon": "📚",
+      "title": "Education",
+      "subtitle": "Sushikkha — NEP · Government school transformation · IIT · IIM · Atal Tinkering Labs",
+      "bengali": ""
+    },
+    {
+      "id": "culture",
+      "icon": "🎭",
+      "title": "Culture & Heritage",
+      "subtitle": "Hrito Gourab — Vande Mataram Museum · Shaktipeeth · Kurmali & Rajbongshi languages · Tagore legacy",
+      "bengali": ""
+    },
+    {
+      "id": "inclusive",
+      "icon": "⚖",
+      "title": "Inclusive Development",
+      "subtitle": "Sokoler Somman — SC/ST/OBC · Tea tribes · Hindu refugees · Hill regions · Gig workers · Solar energy",
+      "bengali": ""
+    },
+    {
+      "id": "infrastructure",
+      "icon": "🏗",
+      "title": "Infrastructure & Development",
+      "subtitle": "Porikathamogoto Unnoyon — Tajpur port · Metro · National Highway · 61 railway projects · North Bengal",
+      "bengali": ""
+    },
+    {
+      "id": "tourism",
+      "icon": "🗺",
+      "title": "Tourism",
+      "subtitle": "Porjoton Shilpe — Darjeeling · Sundarbans · Dooars · Digha · Kolkata UNESCO heritage",
+      "bengali": ""
+    },
+    {
+      "id": "environment",
+      "icon": "🌿",
+      "title": "Environment",
+      "subtitle": "Poribeshke Rokkha — Royal Bengal Tiger · Mangrove forests · MISTI",
+      "bengali": ""
+    }
+  ]
+}

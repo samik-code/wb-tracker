@@ -1,0 +1,56 @@
+{
+  "updates": [
+    {
+      "note": "The Department of Women & Child Development and Social Welfare issued the formal gazette notification (No. 2411-WCD/O/AB-4/2026 dated 19 May 2026) officially constituting the 'Annapurna Yojana' scheme. The notification confirms ₹3,000 per month will be credited via Direct Benefit Transfer (DBT) to Aadhaar-linked bank accounts, **effective 1 June 2026**.\n\nEligibility is defined as women aged 25–60 years who are not in permanent government employment (union or state), not drawing salary/pension from any statutory body, panchayat, or aided institution, and are not income-tax payees. **All existing Lakshmir Bhandar beneficiaries (except those dead, shifted, deleted, or identified as absentee electors during SIR-2026) will be automatically migrated.** An online application portal for new applicants opens on 1 June 2026. Sanctioning authority rests with District Magistrates in districts and the KMC Commissioner in Kolkata Municipal Corporation area. This notification was issued with concurrence of the Finance Department.",
+      "sources": [
+        {
+          "url": "https://wcdsw.wb.gov.in/notice_pdf/view/TVRVdw==",
+          "name": "Govt of West Bengal WCD&SW Dept · Notification No. 2411-WCD/O/AB-4/2026 · May 19, 2026"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "label": "Security Alert / scam warning",
+          "text": "The Bengal Police launched a statewide awareness campaign warning citizens about a cybercrime syndicate targeting the newly approved 'Annapurna Bhandar' financial scheme through fake application portals and phishing attempts.",
+          "sources": [
+            {
+              "url": "https://timesofindia.indiatimes.com/city/kolkata/cop-alert-on-annapurna-bhandar-scam/articleshow/131100860.cms",
+              "name": "Times of India · May 14, 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "note": "On May 18, 2026, the state cabinet officially approved the 'Annapurna' monthly financial assistance scheme for women, set to launch on June 1, 2026. The government clarified that existing Lakshmir Bhandar beneficiaries will be automatically migrated to the new scheme, which will disburse ₹3,000 monthly directly into bank accounts.\n\nAdditionally, women who applied for citizenship under the CAA or approached tribunals for voter roll inclusion will also be eligible, and a new portal will soon open for fresh applications.",
+      "sources": [
+        {
+          "url": "https://timesofindia.indiatimes.com/india/west-bengal-cabinets-big-decisions-free-bus-travel-for-women-annapurna-scheme-approved/articleshow/131171376.cms",
+          "name": "Times of India · May 18, 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/bjp-government-in-west-bengal-announces-several-developments-after-second-meeting-of-cabinet-dgtl/cid/1687627",
+          "name": "Anandabazar Patrika · May 18, 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/discussions-and-disicions-taken-in-cabinet-meeting-of-west-bengal-government-led-by-cm-suvendu-adhikari-live-updates-dgtl/cid/1687590",
+          "name": "Anandabazar Patrika · May 18, 2026"
+        }
+      ]
+    },
+    {
+      "note": "In the first cabinet meeting, CM Suvendu Adhikari announced the \"Annapurna Bhandaar\" scheme to replace Lakshmir Bhandar, providing ₹3,000 per month to eligible women starting June 1, 2026. No official gazette notification published yet — tracking cabinet statement only. ↗ Times of India · May 2026 ↗ Anandabazar Patrika · May 12, 2026",
+      "sources": [
+        {
+          "url": "https://timesofindia.indiatimes.com/india/suvendu-government-to-roll-out-annapurna-bhandar-scheme-from-june-1-bengal-women-to-get-rs-3000-monthly/articleshow/131016274.cms",
+          "name": "Times of India · May 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/west-bengal-government-announced-annapurna-bhandar-to-start-from-june-1-dgtl/cid/1686266",
+          "name": "Anandabazar Patrika · May 12, 2026"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

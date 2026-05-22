@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WB Accountability Tracker - Checking BJP Sarkar Promises</title>
+  <meta name="description"
+    content="Track every promise made by BJP's Suvendu Adhikari government in West Bengal (2026–2031) — from ₹3,000/month for women and free bus travel to border fencing and DA arrears. A non-partisan public accountability ledger.">
+  <meta name="keywords"
+    content="BJP West Bengal promises, Suvendu Adhikari, West Bengal 2026 election, Annapurna Bhandar, women scheme, promise tracker, BJP manifesto Bengal, West Bengal accountability tracker">
+  <meta name="author" content="West Bengal Accountability Tracker">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E8620A">
+  <link rel="canonical" href="https://bjp-govt-wb.pages.dev/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bjp-govt-wb.pages.dev/">
+  <meta property="og:site_name" content="WB Accountability Tracker">
+  <meta property="og:title" content="WB Accountability Tracker - Checking BJP Sarkar Promises">
+  <meta property="og:description"
+    content="A non-partisan public ledger tracking every promise made by BJP's Suvendu Adhikari government to the people of West Bengal. ₹3,000/month for women, free bus travel, border fencing, DA arrears & more.">
+  <meta property="og:image" content="https://bjp-govt-wb.pages.dev/og-preview.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://bjp-govt-wb.pages.dev/">
+  <meta name="twitter:title" content="WB Accountability Tracker - Checking BJP Sarkar Promises">
+  <meta name="twitter:description"
+    content="A non-partisan public ledger tracking every promise made by BJP's Suvendu Adhikari government to the people of West Bengal.">
+  <meta name="twitter:image" content="https://bjp-govt-wb.pages.dev/og-preview.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+  </noscript>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Core Web Vitals Optimization: Preload Critical Above-The-Fold Assets -->
+  <link rel="preload" href="wb-map.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="data/promises.json" as="fetch" crossorigin>
+  <link rel="preload" href="data/meta.json" as="fetch" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WB Accountability Tracker",
+    "alternateName": ["WB Accountability Tracker", "BJP Sarkar Promises", "West Bengal Promise Tracker"],
+    "url": "https://bjp-govt-wb.pages.dev/",
+    "description": "A non-partisan public accountability ledger tracking promises made to the people of West Bengal for 2026-2031.",
+    "inLanguage": "en-IN"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-bar">
+      <span><span class="live-tag">LIVE</span> &nbsp; WB Accountability Tracker — Checking BJP Sarkar Promises
+        &nbsp;|&nbsp; Assembly Election 2026</span>
+      <span id="today-date">Loading...</span>
+    </div>
+    <div class="masthead-main">
+      <div class="masthead-logo">
+        <img src="wb-map.webp" class="wb-map-icon" alt="West Bengal Map" width="90" height="140" fetchpriority="high"
+          decoding="async">
+      </div>
+      <div class="masthead-text">
+        <h1>WB Accountability<br><span>Tracker</span></h1>
+        <p class="masthead-sub" id="site-subtitle">West Bengal's public ledger, checking BJP Sarkar Promises — tracking
+          every commitment made to the people, 2026–2031</p>
+        <div class="masthead-meta" id="masthead-meta">
+          <div class="meta-item">
+            <span class="meta-label">Chief Minister</span>
+            <span class="meta-value">Suvendu Adhikari</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Oath Ceremony</span>
+            <span class="meta-value">9 May 2026, Brigade Parade Ground</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Term Ends</span>
+            <span class="meta-value">May 2031</span>
+          </div>
+          <div class="meta-item meta-highlight">
+            <span class="meta-label">Days in Office</span>
+            <span class="meta-value" id="days-in-office">—</span>
+          </div>
+          <div class="meta-item meta-highlight">
+            <span class="meta-label">Days Remaining</span>
+            <span class="meta-value" id="days-remaining">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- COUNTDOWN TIMER -->
+  <div class="timer-section">
+    <div class="timer-block">
+      <span class="timer-num" id="t-years">—</span>
+      <span class="timer-lbl">Years</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-block">
+      <span class="timer-num" id="t-months">—</span>
+      <span class="timer-lbl">Months</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-block">
+      <span class="timer-num" id="t-days">—</span>
+      <span class="timer-lbl">Days</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-block">
+      <span class="timer-num" id="t-hours">—</span>
+      <span class="timer-lbl">Hours</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-block">
+      <span class="timer-num" id="t-mins">—</span>
+      <span class="timer-lbl">Minutes</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-block">
+      <span class="timer-num" id="t-secs">—</span>
+      <span class="timer-lbl">Seconds</span>
+    </div>
+  </div>
+
+  <div class="disclaimer-band">
+    <strong>Disclaimer:</strong> This is not a government or political website. It is an independent public notepad
+    maintained by the people of West Bengal.
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-band">
+    <div class="stats-inner">
+      <div class="stat-card" data-filter="all">
+        <span class="stat-num total-c" id="stat-total">—</span>
+        <span class="stat-label">Total Promises</span>
+      </div>
+      <div class="stat-card" data-filter="done">
+        <span class="stat-num done-c" id="stat-done">—</span>
+        <span class="stat-label">Fulfilled ✓</span>
+      </div>
+      <div class="stat-card" data-filter="inprogress">
+        <span class="stat-num inprogress-c" id="stat-inprogress">—</span>
+        <span class="stat-label">In Progress ◑</span>
+      </div>
+      <div class="stat-card" data-filter="evaded">
+        <span class="stat-num evaded-c" id="stat-evaded">—</span>
+        <span class="stat-label">Evaded ✗</span>
+      </div>
+      <div class="stat-card" data-filter="pending">
+        <span class="stat-num pending-c" id="stat-pending">—</span>
+        <span class="stat-label">Pending ○</span>
+      </div>
+      <div class="stat-card stat-card-pct">
+        <span class="stat-num saffron-c" id="stat-pct">0%</span>
+        <span class="stat-label">Completion Rate</span>
+      </div>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-track">
+        <div class="progress-bar-done bg-done-c" id="bar-done" style="width:0%"></div>
+        <div class="progress-bar-inprog bg-inprogress-c" id="bar-inprog" style="width:0%"></div>
+        <div class="progress-bar-evaded bg-evaded-c" id="bar-evaded" style="width:0%"></div>
+      </div>
+      <div class="progress-legend">
+        <span><span class="legend-dot bg-done-c"></span>Fulfilled</span>
+        <span><span class="legend-dot bg-inprogress-c"></span>In Progress</span>
+        <span><span class="legend-dot bg-evaded-c"></span>Evaded</span>
+        <span><span class="legend-dot bg-pending-c"></span>Pending</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISPATCH + HOW-TO-READ (just below promise counters) -->
+  <div class="pre-nav-content">
+
+    <!-- Latest Updates Ticker -->
+    <section class="live-dispatch-section" id="dispatch-section">
+      <div class="dispatch-card">
+        <div class="dispatch-header">
+          <div class="dispatch-label">Latest Updates</div>
+          <div class="dispatch-controls">
+            <button class="dispatch-btn" id="dispatch-prev" title="Previous">←</button>
+            <button class="dispatch-btn" id="dispatch-next" title="Next">→</button>
+          </div>
+        </div>
+        <div class="dispatch-content" id="dispatch-ticker">
+          <!-- Populated by JS -->
+          <div class="loading">Initializing live feed...</div>
+        </div>
+        <div class="dispatch-footer">
+          <a href="latest.html" class="view-all-updates">View All Updates →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Read -->
+    <div class="how-to-read">
+      <div id="tracker-guide-static">
+        <strong>How to read this tracker</strong>
+        Each promise is logged verbatim from the BJP manifesto (<em>Bhoroshar Shopoth</em>). Status is updated as events
+        unfold over the 5-year term (2026–2031). This is a non-partisan public record.
+        <div class="legend-inline">
+          <span class="badge badge-done">✓ Fulfilled</span><span class="how-to-def">— gazette / bill / scheme
+            operational</span>
+          <span class="badge badge-progress">◑ In Progress</span><span class="how-to-def">— announcement with
+            source</span>
+          <span class="badge badge-evaded">✗ Evaded</span><span class="how-to-def">— structurally abandoned</span>
+          <span class="badge badge-pending">○ Pending</span><span class="how-to-def">— no action yet</span>
+        </div>
+      </div>
+      <div id="active-filters-banner" class="active-filters-banner" style="display:none;"></div>
+      <div class="result-summary" id="result-summary" aria-live="polite" style="display:none;"></div>
+    </div>
+
+  </div><!-- /.pre-nav-content -->
+
+  <!-- NAVIGATION -->
+  <nav class="cat-nav">
+    <div class="cat-nav-desktop" id="desktop-nav">
+      <!-- Populated by JS -->
+    </div>
+    <!-- Mobile: dropdown -->
+    <div class="cat-nav-mobile">
+      <button class="nav-trigger" id="nav-trigger" aria-expanded="false">
+        <span>📋 Jump to Section</span>
+        <span class="nav-trigger-arrow">▾</span>
+      </button>
+      <div class="nav-dropdown" id="nav-dropdown">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Key Promises (full-width, outside main) -->
+  <section class="key-promises-section" id="key-15">
+    <div class="key-promises-inner">
+      <h2 class="kp-title">⭐ BJP's 15 Key Promises — The Headline Commitments</h2>
+      <div class="kp-grid" id="key-promises-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="promises">
+
+    <!-- Categories container -->
+    <div id="categories-container">
+      <div class="loading">Loading promises...</div>
+    </div>
+
+    <!-- Other Initiatives Link -->
+    <div class="other-initiatives-link-wrap">
+      <p class="other-initiatives-text">
+        Looking for government actions not mentioned in the manifesto?
+        <a href="initiatives.html" class="other-initiatives-link">View Other Initiatives and Updates →</a>
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <div class="fab-container">
+    <div class="fab-row">
+      <a class="fab-help" href="help.html" title="Help Portal — Support Bridge">
+        🤝
+      </a>
+      <button class="fab-home" id="fab-home" title="Back to Top">
+        🏠
+      </button>
+    </div>
+    <a class="fab-submit" href="https://tally.so/r/ja5B74" target="_blank" rel="noopener">
+      ✏ Submit An Update
+    </a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-disclaimer">
+        <span class="footer-nonpolitical">🗒️ This is not a political website.</span>
+        It is a public notepad maintained by ordinary people of West Bengal — so we don't forget what was promised to
+        us.
+        We hold no affiliation with any party. We track facts, not opinions.<br />
+        <a class="footer-faq-link" href="faq.html">❓ Read the Frequently Asked Questions (FAQ) →</a>
+      </div>
+
+      <div class="footer-content-grid">
+        <div class="footer-goodfaith">
+          <h3 class="footer-section-title">A Note on Good Faith</h3>
+          <p>
+            This tracker was created with genuine good faith — we believe in holding elected governments accountable to
+            the promises they made publicly, and we want this BJP government to succeed in fulfilling them for the
+            people
+            of West Bengal.
+            We are not here to root for failure.
+          </p>
+          <p style="margin-top:12px">
+            We are ordinary people, not journalists. There is a real possibility that we miss news, fail to update
+            things
+            quickly, or are unaware of developments on the ground. <strong>That is exactly why we need your
+              help.</strong>
+            If you know that something has been done, started, or abandoned — please tell us.
+          </p>
+          <a class="footer-submit-link" href="https://tally.so/r/ja5B74" target="_blank" rel="noopener">
+            ✏ Submit information or a correction →
+          </a>
+        </div>
+
+        <div class="footer-opensource">
+          <h3 class="footer-section-title">Host Your Own Version</h3>
+          <p>
+            Anyone can fork this tracker and maintain their own version — for their district, their constituency, or
+            their own set of promises to watch. The complete source code of this website is freely available.
+            No login, no backend, no cost. Just download, edit, and host on any static hosting service like
+            Cloudflare Pages, GitHub Pages, or Netlify.
+          </p>
+          <p style="margin-top: 10px; font-style: italic; opacity: 0.7; font-size: 14px;">
+            Note: The original source code of the v1 version is linked below; future iterations of the platform's codebase may be shared over time depending on ongoing developments.
+          </p>
+          <a class="footer-code-link" href="https://pastebin.com/raw/56SxjWNb" target="_blank" rel="noopener"
+            id="source-link">
+            &lt;/&gt; View complete source code →
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-methodology">
+        <h3 class="footer-section-title">Methodology &amp; Standards</h3>
+        <div class="footer-rules">
+          <div class="footer-rule">
+            <span class="rule-num">01</span>
+            <div>
+              <strong>Source of promises</strong><br>
+              All promises are sourced verbatim from the official BJP West Bengal manifesto, <em>Bhoroshar Shopoth</em>,
+              released ahead of the 2026 Assembly Election.
+              <br><a href="https://www.bjp.org/files/election-manifesto-documents/Bhoroshar-Shopoth-EN-WB.pdf"
+                target="_blank" rel="noopener">📄 Read the official manifesto →</a>
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">02</span>
+            <div>
+              <strong>Source hierarchy for fulfilment</strong><br>
+              We follow a strict source hierarchy: (1) Official government gazette or government order — the gold
+              standard. (2) State government press release or official cabinet statement. (3) PTI / ANI wire reports
+              carried by national publications like Business Standard, The Hindu, Indian Express, or Hindustan Times.
+              Quotes from party politicians or social media posts do not qualify as sources. While we endeavor to adhere
+              strictly to this hierarchy, depending on the circumstances, secondary sources of verifiable facts (such as
+              portal statistics or historical institutional archives) may be utilized—with the absolute requirement that
+              any presented information is directly linked.
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">03</span>
+            <div>
+              <strong>How a promise is marked "In Progress"</strong><br>
+              A promise is marked in progress when any credible news report, cabinet statement, or official
+              announcement confirms the government has initiated or is actively pursuing it — with a source link
+              attached. A formal gazette or tender is not required for "In Progress".
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">04</span>
+            <div>
+              <strong>What "Evaded" means</strong><br>
+              A promise is marked evaded when the government has taken action that makes its fulfilment structurally
+              impossible — for example, privatising an industry that was promised revival, or repealing a scheme it
+              pledged to implement. Pending implies it could still happen. Evaded means the door has been closed.
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">05</span>
+            <div>
+              <strong>How a promise is marked "Fulfilled"</strong><br>
+              Fulfilled requires a formal document (gazette notification, bill enacted, official order) or verified
+              on-ground evidence that beneficiaries are receiving the benefit — sourced from a Tier 1 or 2
+              publication.
+            </div>
+          </div>
+          <div class="footer-rule">
+            <span class="rule-num">06</span>
+            <div>
+              <strong>Term tracked</strong><br>
+              Oath ceremony: 9 May 2026. All promises are tracked over the full 5-year term ending May 2031.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="last-updated" id="last-updated-footer">—</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript-warning">This tracker needs JavaScript to load its data files. Please enable JavaScript, or use
+      the single-file v1 copy for offline viewing.</div>
+  </noscript>
+  <script src="js/app.js" defer></script>
+  <script src="js/share.js" defer></script>
+</body>
+
+</html>

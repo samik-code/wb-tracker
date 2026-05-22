@@ -1,0 +1,74 @@
+{
+  "updates": [
+    {
+      "note": "The Transport Department issued Notification No. 1723-WT/TPT/18011/30/2026 on May 21, 2026, officially enacting free bus travel for all women in West Bengal starting June 1, 2026. Women can initially travel by showing any valid government photo ID to receive a Zero Value Ticket, but must eventually transition to a QR-coded Smart Card.",
+      "sources": [
+        {
+          "url": "https://transport.wb.gov.in/acts-rules/notifications-orders-guidelines/",
+          "name": "Transport Department · Notification No. 1723-WT/TPT/18011/30/2026 · May 21, 2026"
+        },
+        {
+          "url": "https://x.com/ians_india/status/2057724711908618253",
+          "name": "IANS India · May 21, 2026"
+        }
+      ],
+      "additionalNotes": [
+        {
+          "label": "Private Bus Dominance",
+          "text": "The free travel scheme is strictly limited to state-run buses (WBTC, SBSTC, NBSTC) and excludes private buses. Historical transport data indicates private buses operate about 80% of routes in West Bengal, significantly limiting the policy's real-world coverage.",
+          "sources": [
+            {
+              "url": "https://www.researchersworld.com/index.php/rworld/article/download/587/547/768",
+              "name": "Researchers World · Journal of Science & Technology · Transport Study"
+            }
+          ]
+        },
+        {
+          "label": "Notice Access Alternate",
+          "text": "Currently, the official notice is inaccessible from the government portal due to technical issues. An alternate X (formerly Twitter) link from IANS news agency is provided for verification, which will be updated to the official direct link once accessible.",
+          "sources": [
+            {
+              "url": "https://transport.wb.gov.in/acts-rules/notifications-orders-guidelines/",
+              "name": "Transport Department Portal"
+            },
+            {
+              "url": "https://x.com/ians_india/status/2057724711908618253",
+              "name": "IANS India · May 21, 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "note": "On May 18, 2026, the state cabinet gave policy approval to allow free travel for women in government-run buses, effective June 1, 2026. The state government announced that the scheme will initially utilize the existing fleet and infrastructure of state-run transport systems.\n\nWhile no immediate expansion of the fleet is planned, the administration indicated that a proposal for new electric buses would be introduced in the upcoming June budget session.",
+      "sources": [
+        {
+          "url": "https://timesofindia.indiatimes.com/india/west-bengal-cabinets-big-decisions-free-bus-travel-for-women-annapurna-scheme-approved/articleshow/131171376.cms",
+          "name": "Times of India · May 18, 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/bjp-government-in-west-bengal-announces-several-developments-after-second-meeting-of-cabinet-dgtl/cid/1687627",
+          "name": "Anandabazar Patrika · May 18, 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/discussions-and-disicions-taken-in-cabinet-meeting-of-west-bengal-government-led-by-cm-suvendu-adhikari-live-updates-dgtl/cid/1687590",
+          "name": "Anandabazar Patrika · May 18, 2026"
+        }
+      ]
+    },
+    {
+      "note": "The cabinet approved free travel for women in state-run buses starting June 1, 2026. No official gazette notification published yet — tracking cabinet statement only. ↗ Times of India · May 2026 ↗ Anandabazar Patrika · May 12, 2026",
+      "sources": [
+        {
+          "url": "https://timesofindia.indiatimes.com/india/suvendu-government-to-roll-out-annapurna-bhandar-scheme-from-june-1-bengal-women-to-get-rs-3000-monthly/articleshow/131016274.cms",
+          "name": "Times of India · May 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/west-bengal-government-announced-annapurna-bhandar-to-start-from-june-1-dgtl/cid/1686266",
+          "name": "Anandabazar Patrika · May 12, 2026"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

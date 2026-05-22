@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Initiatives & Updates — WB Accountability Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+    </noscript>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Core Web Vitals Optimization: Preload Critical Assets -->
+    <link rel="preload" href="data/initiative_updates.json" as="fetch" crossorigin>
+    <style>
+        body {
+            background: var(--paper);
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--ink-faint);
+            text-decoration: none;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .back-home:hover {
+            color: var(--saffron);
+            transform: translateX(-4px);
+        }
+
+        .archive-item {
+            cursor: default;
+        }
+
+        .archive-item:hover {
+            transform: none;
+        }
+
+        .non-manifesto-badge {
+            display: inline-block;
+            background: var(--red-pale);
+            color: var(--red);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+
+        .disclaimer-box {
+            background: var(--saffron-pale);
+            border: 1px solid var(--saffron-mid);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .disclaimer-icon {
+            font-size: 24px;
+        }
+
+        .disclaimer-text {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            color: var(--saffron-dark);
+            line-height: 1.5;
+        }
+
+        .item-sources {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-top: 1px solid var(--rule-light);
+            padding-top: 12px;
+        }
+
+        .archive-source-link {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 500;
+            color: var(--ink-blue);
+            text-decoration: none;
+            background: rgba(0, 71, 171, 0.03);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 71, 171, 0.12);
+            transition: all 0.15s ease;
+        }
+
+        .archive-source-link:hover {
+            background: rgba(0, 71, 171, 0.08);
+            border-color: var(--ink-blue);
+            color: #002366;
+        }
+
+        .archive-item-title {
+            color: var(--ink-blue);
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 900;
+            margin: 8px 0;
+            display: block;
+        }
+
+        .loading {
+            font-family: var(--font-sans);
+            font-size: 16.5px;
+            color: var(--ink-faint);
+            text-align: center;
+            padding: 60px 0;
+            font-style: italic;
+        }
+
+        .load-more-wrap {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .load-more-btn {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            padding: 12px 32px;
+            font-family: var(--font-ui);
+            font-size: 11.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 4px;
+            color: var(--ink-mid);
+        }
+
+        .load-more-btn:hover {
+            background: var(--paper-warm);
+            border-color: var(--saffron);
+            color: var(--saffron-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="archive-container">
+        <div class="archive-nav">
+            <a href="index.html" class="back-home">← Back to Dashboard</a>
+            <a href="latest.html" class="nav-next">Latest Updates →</a>
+        </div>
+
+        <header class="archive-header">
+            <h1 class="archive-title">Other Initiatives & Updates</h1>
+            <p style="font-family: var(--font-sans); font-size: 16.5px; color: var(--ink-faint); font-style: italic;">
+                Tracking significant government actions and policy updates not explicitly listed in the 2026 Manifesto.
+            </p>
+        </header>
+
+        <div class="disclaimer-box">
+            <span class="disclaimer-icon">ℹ️</span>
+            <div class="disclaimer-text">
+                <strong>Manifesto Separation:</strong> The items listed on this page are independent government
+                initiatives.
+                They are <strong>not part of the official BJP Manifesto (Bhoroshar Shopoth)</strong> and are therefore
+                not included in the main promise completion statistics on the homepage.
+            </div>
+        </div>
+
+        <div class="archive-timeline" id="initiatives-timeline">
+            <div class="loading">Loading initiatives...</div>
+        </div>
+
+        <div class="load-more-wrap" id="load-more-container" style="display: none;">
+            <button id="load-more-btn" class="load-more-btn">Load More Initiatives</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-bottom"
+                style="border-top: none; padding-top: 0; justify-content: center; margin-top: 0;">
+                <span class="last-updated" style="color: rgba(255, 255, 255, 0.45); font-family: var(--font-ui);">WB
+                    ACCOUNTABILITY TRACKER &copy; 2026-2031</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let allUpdates = [];
+        let displayedCount = 0;
+        const ITEMS_PER_PAGE = 20;
+
+        async function init() {
+            try {
+                const res = await fetch('data/initiative_updates.json');
+                if (!res.ok) throw new Error('Failed to load initiatives');
+                allUpdates = await res.json();
+
+                // Sort by date desc
+                allUpdates.sort((a, b) => b.date.localeCompare(a.date));
+
+                // Assign a unique key to each update to prevent deduplication issues for same-day updates
+                allUpdates.forEach((u, i) => {
+                    u.uniqueKey = `${u.promiseId}-${u.date}-${i}`;
+                });
+
+                const targetId = window.location.hash.substring(1);
+                if (targetId) {
+                    // If there's a deep link, find where it is
+                    const targetIdx = allUpdates.findIndex(u => u.promiseId === targetId);
+                    if (targetIdx !== -1) {
+                        // Render everything up to the target + a few more
+                        displayedCount = 0;
+                        renderBatch(Math.max(ITEMS_PER_PAGE, targetIdx + 5));
+
+                        // Small delay to ensure DOM is ready
+                        setTimeout(() => scrollToTarget(targetId), 300);
+                    } else {
+                        renderBatch(ITEMS_PER_PAGE);
+                    }
+                } else {
+                    renderBatch(ITEMS_PER_PAGE);
+                }
+
+                document.getElementById('load-more-btn')?.addEventListener('click', () => renderBatch(ITEMS_PER_PAGE));
+
+            } catch (e) {
+                console.error(e);
+                document.getElementById('initiatives-timeline').innerHTML = '<div class="loading error-state">Failed to load initiatives data.</div>';
+            }
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[char]));
+        }
+
+        function splitIntoSentences(text) {
+            const sentences = [];
+            let currentSentence = '';
+            const abbrevs = new Set([
+                'no', 'mr', 'mrs', 'ms', 'dr', 'prof', 'sr', 'jr', 'vs', 'etc', 'eg', 'ie',
+                'rs', 'govt', 'dept', 'co', 'ltd', 'inc', 'corp', 'st', 'jan', 'feb', 'mar',
+                'apr', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec', 'approx', 'vol',
+                'pp', 'ed', 'gen', 'col', 'sen', 'rep', 'gov', 'ca', 'intl', 'sec', 'art',
+                'dir', 'dist', 'hq', 'dgp', 'sp', 'dm', 'sdm', 'bdo', 'sdo', 'wcd', 'wb',
+                'goa', 'hon', 'pb', 'hr', 'up', 'mp', 'ap', 'tel'
+            ]);
+
+            let inBold = false;
+            let i = 0;
+            while (i < text.length) {
+                if (text.startsWith('**', i)) {
+                    inBold = !inBold;
+                    currentSentence += '**';
+                    i += 2;
+                    continue;
+                }
+
+                const char = text[i];
+                currentSentence += char;
+
+                if (!inBold && (char === '.' || char === '?' || char === '!')) {
+                    const isLast = (i === text.length - 1);
+                    const isFollowedBySpace = !isLast && /\s/.test(text[i + 1]);
+
+                    if (isLast || isFollowedBySpace) {
+                        let isSentenceEnd = true;
+
+                        if (char === '.') {
+                            let j = i - 1;
+                            let word = '';
+                            while (j >= 0 && /[a-zA-Z0-9.\-]/.test(text[j])) {
+                                word = text[j] + word;
+                                j--;
+                            }
+                            const cleanedWord = word.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                            if (abbrevs.has(cleanedWord)) {
+                                isSentenceEnd = false;
+                            }
+                            if (cleanedWord.length === 1 && /[a-zA-Z]/.test(cleanedWord)) {
+                                isSentenceEnd = false;
+                            }
+                        }
+
+                        if (isSentenceEnd) {
+                            i++;
+                            while (i < text.length && /["')\]\s]/.test(text[i])) {
+                                currentSentence += text[i];
+                                i++;
+                            }
+                            sentences.push(currentSentence.trim());
+                            currentSentence = '';
+                            continue;
+                        }
+                    }
+                }
+                i++;
+            }
+            if (currentSentence.trim()) {
+                sentences.push(currentSentence.trim());
+            }
+            return sentences;
+        }
+
+        function chunkParagraphs(text, maxLen = 360) {
+            if (!text) return [];
+            const rawParagraphs = String(text).split(/\n\s*\n/);
+            const finalParagraphs = [];
+
+            for (const rawP of rawParagraphs) {
+                const trimmed = rawP.trim();
+                if (!trimmed) continue;
+
+                if (trimmed.length <= maxLen) {
+                    finalParagraphs.push(trimmed);
+                    continue;
+                }
+
+                const sentences = splitIntoSentences(trimmed);
+                let currentGroup = [];
+                let currentLen = 0;
+
+                for (const sentence of sentences) {
+                    if (currentLen > 0 && currentLen + sentence.length > maxLen) {
+                        finalParagraphs.push(currentGroup.join(' '));
+                        currentGroup = [sentence];
+                        currentLen = sentence.length;
+                    } else {
+                        currentGroup.push(sentence);
+                        currentLen += (currentLen > 0 ? 1 : 0) + sentence.length;
+                    }
+                }
+                if (currentGroup.length > 0) {
+                    finalParagraphs.push(currentGroup.join(' '));
+                }
+            }
+            return finalParagraphs;
+        }
+
+        function formatMultiParagraph(text) {
+            if (!text) return '';
+            const paras = chunkParagraphs(String(text), 360);
+            return paras
+                .map(p => `<p>${escapeHtml(p).replace(/\*\*(.*?)\*\//g, '<strong>$1</strong>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`)
+                .join('');
+        }
+
+        function renderBatch(count) {
+            const timeline = document.getElementById('initiatives-timeline');
+            if (displayedCount === 0) timeline.innerHTML = '';
+
+            const nextBatch = allUpdates.slice(displayedCount, displayedCount + count);
+            if (!nextBatch.length) return;
+
+            // Group by date
+            const groups = nextBatch.reduce((acc, u) => {
+                if (!acc[u.date]) acc[u.date] = [];
+                acc[u.date].push(u);
+                return acc;
+            }, {});
+
+            Object.keys(groups).sort((a, b) => b.localeCompare(a)).forEach(date => {
+                const formattedDate = new Date(date).toLocaleDateString('en-GB', {
+                    day: 'numeric', month: 'long', year: 'numeric'
+                });
+
+                let dayGroup = document.querySelector(`[data-date="${date}"]`);
+                if (!dayGroup) {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.className = 'archive-day-group';
+                    groupDiv.setAttribute('data-date', date);
+                    groupDiv.innerHTML = `<span class="archive-date-label">${formattedDate}</span><div class="items-container"></div>`;
+                    timeline.appendChild(groupDiv);
+                    dayGroup = groupDiv;
+                }
+
+                const container = dayGroup.querySelector('.items-container');
+                groups[date].forEach(u => {
+                    const uniqueId = u.uniqueKey;
+                    // Check if already in DOM (can happen with deep-link render then load more)
+                    if (document.getElementById(uniqueId)) return;
+
+                    const item = document.createElement('div');
+                    item.className = 'archive-item';
+                    item.id = uniqueId; // Set unique ID for duplicate check
+                    item.setAttribute('data-promise-id', u.promiseId); // Set data attribute for deep linking scroll target
+                    let nestedHtml = '';
+                    if (Array.isArray(u.counterEvidence) && u.counterEvidence.length) {
+                        u.counterEvidence.forEach(c => {
+                            const cSources = Array.isArray(c.sources) ? c.sources : [];
+                            nestedHtml += `
+                            <div class="counter-block" style="margin-top: 14px; border-left: 3px solid #ef4444; padding-left: 12px; background: rgba(239, 68, 68, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                                <span class="counter-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #b91c1c; text-transform: uppercase; display: flex; align-items: center; gap: 4px;">🛑 Counter Evidence: ${escapeHtml(c.label || 'Debatable')}</span>
+                                <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(c.text)}</div>
+                                ${cSources.length ? `
+                                    <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                        ${cSources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        });
+                    }
+                    if (Array.isArray(u.additionalNotes) && u.additionalNotes.length) {
+                        u.additionalNotes.forEach(n => {
+                            const nSources = Array.isArray(n.sources) ? n.sources : [];
+                            nestedHtml += `
+                            <div class="note-block" style="margin-top: 14px; border-left: 3px solid var(--saffron-mid); padding-left: 12px; background: rgba(232, 98, 10, 0.02); padding-top: 8px; padding-bottom: 8px; border-radius: 0 4px 4px 0;">
+                                <span class="note-label" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--saffron-dark); text-transform: uppercase; display: flex; align-items: center; gap: 4px;">📌 Note: ${escapeHtml(n.label || 'Additional Note')}</span>
+                                <div class="archive-item-note" style="margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-mid);">${formatMultiParagraph(n.text)}</div>
+                                ${nSources.length ? `
+                                    <div class="item-sources" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                                        ${nSources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                        });
+                    }
+
+                    item.innerHTML = `
+                    <span class="non-manifesto-badge">Non-Manifesto Initiative</span>
+                    <span class="archive-item-meta">${u.category.replace('-', ' ')}</span>
+                    <span class="archive-item-title">${u.title}</span>
+                    <div class="archive-item-note">${formatMultiParagraph(u.note)}</div>
+                    ${nestedHtml}
+                    ${u.sources ? `
+                        <div class="item-sources">
+                            ${u.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                `;
+                    container.appendChild(item);
+                });
+            });
+
+            displayedCount += nextBatch.length;
+            const loadMoreWrap = document.getElementById('load-more-container');
+            if (displayedCount < allUpdates.length) {
+                loadMoreWrap.style.display = 'block';
+            } else {
+                loadMoreWrap.style.display = 'none';
+            }
+        }
+
+        function scrollToTarget(id) {
+            let el = document.getElementById(id);
+            if (!el) {
+                el = document.querySelector(`[data-promise-id="${id}"]`);
+            }
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.style.backgroundColor = 'rgba(232, 98, 10, 0.08)';
+                el.style.borderRadius = '8px';
+                el.style.padding = '15px';
+                el.style.marginLeft = '-15px';
+                el.style.marginRight = '-15px';
+                el.style.border = '1px solid var(--saffron-mid)';
+                setTimeout(() => {
+                    el.style.backgroundColor = '';
+                    el.style.border = 'none';
+                    el.style.padding = '';
+                    el.style.marginLeft = '';
+                    el.style.marginRight = '';
+                }, 3000);
+            }
+        }
+
+        init();
+
+        window.addEventListener('hashchange', () => {
+            const targetId = window.location.hash.substring(1);
+            if (targetId) scrollToTarget(targetId);
+        });
+    </script>
+    <script src="js/share.js" defer></script>
+</body>
+
+</html>

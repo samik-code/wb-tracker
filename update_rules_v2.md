@@ -7,12 +7,12 @@
 The v2 tracker uses a **3-Layer Data Architecture** to balance performance with detail:
 
 | File / Dir | Layer | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `data/promises.json` | **State Layer (Main)** | Optimized "index" of manifesto promises. Stores status, counts, and text. |
-| `data/initiatives.json` | **State Layer (Others)**| Index of non-manifesto initiatives (e.g. tech pilots, administrative orders). |
+| `data/initiatives.json` | **State Layer (Others)** | Index of non-manifesto initiatives (e.g. tech pilots, administrative orders). |
 | `data/updates.json` | **Event Log (Main)** | Master Feed of manifesto updates. Used for ticker and archive. |
-| `data/initiative_updates.json` | **Event Log (Others)**| Feed of non-manifesto updates. Merged into ticker and archive via JS. |
-| `data/updates/<id>.json`| **Evidence Layer** | Deep-dive file for a specific promise OR initiative (e.g. `initiative-1.json`). |
+| `data/initiative_updates.json` | **Event Log (Others)** | Feed of non-manifesto updates. Merged into ticker and archive via JS. |
+| `data/updates/<id>.json` | **Evidence Layer** | Deep-dive file for a specific promise OR initiative (e.g. `initiative-1.json`). |
 
 **Important**: `updates_master.json` is deprecated and has been deleted. Do not recreate it.
 
@@ -25,13 +25,14 @@ The v2 tracker uses a **3-Layer Data Architecture** to balance performance with 
 Only these tiers qualify as evidence for updating a promise status:
 
 | Tier | Source Type | Example |
-|------|------------|---------|
+| --- | --- | --- |
 | **1 (Gold)** | Official government gazette / GO | Gazette notification PDF, official order |
 | **2** | State government press release / official cabinet statement | CM's post-cabinet press briefing |
 | **3** | PTI / ANI wire reports carried by national publications | Business Standard, The Hindu, Indian Express, Hindustan Times, Economic Times, Live Mint |
 | **3** | Credible regional publications (English or Bengali) | The Telegraph India, Anandabazar Patrika |
 
 **Disqualified sources (never use):**
+
 - Social media posts (Twitter/X, Facebook, WhatsApp forwards)
 - Party politician quotes without a corresponding official action
 - YouTube videos or TV news transcripts alone
@@ -42,7 +43,7 @@ Only these tiers qualify as evidence for updating a promise status:
 ## 3. Status Definitions
 
 | Status | JSON value | When to apply |
-|--------|------------|---------------|
+| --- | --- | --- |
 | **Pending** | `"pending"` | No credible action reported yet |
 | **In Progress — Tier A** | `"inprogress"` | Cabinet announcement, press briefing, or news report confirming the government is actively pursuing the promise. A `sources` array entry is required. |
 | **In Progress — Tier B** | `"inprogress"` | Formal bureaucratic action started: gazette notification draft, bill tabled, scheme officially launched. |
@@ -67,6 +68,7 @@ Each promise object has these fields:
   "status": "inprogress",            // One of: pending | inprogress | done | evaded
   "updateCount": 2,                  // Total number of updates in the paired .json file
   "counterCount": 1,                 // Number of counterEvidence entries in the paired .json file
+  "noteCount": 0,                    // Number of additionalNotes entries in the paired .json file (defaults to 0 if omitted)
   "latestUpdate": {                  // Summary of most recent update (for Latest Developments feed)
     "summary": "First ~120 chars of the most recent update note...",
     "sourceCount": 1,
@@ -76,11 +78,12 @@ Each promise object has these fields:
 }
 ```
 
-### Rules for editing `promises.json`:
+### Rules for editing `promises.json`
 
 - ✅ Update `status` when evidence warrants it.
 - ✅ Increment `updateCount` by 1 each time you add an update to the paired `.json` file.
 - ✅ Increment `counterCount` by 1 each time you add a `counterEvidence` entry.
+- ✅ Increment `noteCount` by 1 each time you add an `additionalNotes` entry.
 - ✅ Update `latestUpdate.summary` to the first ~120 characters of the newest update note.
 - ✅ Update `latestUpdate.sourceCount` to match the number of sources in the newest update.
 - ✅ Update `latestUpdate.date` to the ISO date (`YYYY-MM-DD`) of the newest update.
@@ -107,32 +110,51 @@ Each update file has this structure:
           "text": "Specific counter-note for this development...",
           "sources": [{ "url": "...", "name": "..." }]
         }
+      ],
+      "additionalNotes": [ // Optional: Nest here for important context, alerts, or scam warnings
+        {
+          "label": "Security Alert",
+          "text": "Important background context or warning related to this development...",
+          "sources": [{ "url": "...", "name": "..." }]
+        }
       ]
     }
   ],
   "counterEvidence": [ // Global: Use here if it applies to the entire promise theme
     { "label": "...", "text": "...", "sources": [...] }
+  ],
+  "additionalNotes": [ // Global: Use here for general notes applying to the entire promise theme
+    { "label": "...", "text": "...", "sources": [...] }
   ]
 }
 ```
 
-### Array order — CRITICAL:
+### Array order — CRITICAL
 
 > **Index 0 = most recent update.** The UI renders `Update N` by calculating (Total - Index). Prepend new updates to the **start** of the `updates` array.
 
-### Nested Counter-Evidence:
-- If a "Debatable" or "Contradicted" flag only applies to a specific event (e.g., a specific CBI probe or a specific implementation date), nest it **inside** that update object.
-- If the objection is about the entire promise's progress, place it in the root-level `counterEvidence` array.
+### Nested Counter-Evidence & Additional Notes
 
-### Writing the `note` field:
+- **Difference in Purpose**:
+  - `counterEvidence` is for **critical, debatable, or conflicting** reports that contest enforcement or status on the ground (rendered with a bold red label: `🛑 Counter Evidence: [Label]` and a red border callout).
+  - `additionalNotes` is for **informational context, auxiliary warnings, or security/cybercrime alerts** (rendered with a saffron pushpin tag: `📌 Note: [Label]` and a soft saffron border/background callout).
+- **Placement**:
+  - Nest them **inside** an update object if they apply specifically to that single development (e.g. a specific security alert following a cabinet launch).
+  - Place them in the **root-level** array if they apply broadly to the entire promise theme (rendered at the bottom of the details panels).
+
+### Writing the `note` field
 
 - State facts only — no opinion, no political framing.
 - Always mention: what was decided, when, and what is still pending.
 - If only a cabinet statement exists: *"No official gazette notification published yet — tracking cabinet statement only."*
-- Keep it under 4 sentences.
+- Keep it under 3 sentences (unless splitting into multiple paragraphs).
+- **Multi-Paragraph Formatting**: For long or highly detailed updates, separate different logical sections or context blocks using a double newline (`\n\n`). Ensure each individual paragraph remains under 3 sentences.
+  - **Automatic Sentence Chunking**: The rendering system automatically inspects paragraphs. If any single paragraph exceeds **360 characters**, it is automatically split into separate paragraphs at natural sentence boundaries (after `.`, `?`, or `!`).
+  - **Abbreviation & Formatting Intelligence**: The sentence-splitter ignores common abbreviations (such as `No.`, `Govt.`, `Dept.`, `Rs.`, etc.) and initials (like `A. B.`), and keeps track of double asterisks (`**...**`) to prevent breaking inside bold tags.
+  - **Guidelines for Updates**: AI agents should still write structured paragraphs with clean `\n\n` boundaries. The system will handle any unexpectedly long text blocks dynamically to keep them clean and highly readable.
 - Do not include "Source:" text — the `sources` array handles attribution.
 
-### Writing `source.name`:
+### Writing `source.name`
 
 Format exactly as: `Publication · Wire (optional) · Month DD, YYYY`
 
@@ -143,7 +165,7 @@ Examples:
 
 The date in `source.name` is extracted by the UI to display next to the update badge.
 
-### Counter-Evidence rules:
+### Counter-Evidence rules
 
 - Use `counterEvidence` when a promise is `inprogress` or `done` but credible reports contradict enforcement on the ground.
 - **Do not** change the status to `evaded` unless the government *structurally abandoned* the policy.
@@ -160,6 +182,8 @@ Promises with a `keyPromise` integer (1–15) appear in the headline grid at the
 - The card's CSS class and badge are driven by `status` — **no manual HTML editing needed**.
 - Badge text is auto-rendered: `◑ In Progress` · `✓ Fulfilled` · `Pending` · `✗ Evaded`.
 - Update `keyPromise` status by updating `status` in `promises.json` — the grid updates automatically.
+- **Fulfilled Card Text Styling (No Strikethrough)**: When a key promise in the grid is fulfilled (`status: "done"`), the card's text **must not** be struck through (avoid `text-decoration: line-through` which makes completed achievements hard to read). Instead, it renders with high-contrast text (`rgba(255, 255, 255, 0.9)`) for premium, readable presentation.
+- **Grid Number Dynamic Styling**: The card numbers (`.kp-num`) render in premium saffron-orange by default (under pending/in-progress states). When a key promise is fulfilled (`status: "done"`), the card number automatically turns green (`#6ECB7C`), and when a promise is evaded (`status: "evaded"`), the card number turns red (`#F97B7B`) to perfectly match the status badge and maintain a highly cohesive, premium aesthetic.
 
 ---
 
@@ -167,7 +191,8 @@ Promises with a `keyPromise` integer (1–15) appear in the headline grid at the
 
 The "Latest Updates" ticker on the homepage and the "Public Record" page (`latest.html`) read directly from `data/updates.json`. This file must be kept in sync with individual update files.
 
-### Entry Structure:
+### Entry Structure
+
 ```jsonc
 {
   "promiseId": "governance-8",
@@ -177,14 +202,18 @@ The "Latest Updates" ticker on the homepage and the "Public Record" page (`lates
   "category": "governance",
   "sources": [ // ALWAYS include sources for the Public Record view
     { "url": "...", "name": "..." }
-  ]
+  ],
+  "counterEvidence": [ ... ], // Sync nested counterEvidence here if present in paired detailed log
+  "additionalNotes": [ ... ]  // Sync nested additionalNotes here if present in paired detailed log
 }
 ```
 
-### Rules for `updates.json`:
+### Rules for `updates.json`
+
 1. **Prepend**: Newest updates must always be at the **top** of the array (Index 0).
 2. **Sync**: Every time you create or edit `data/updates/<id>.json`, you **must** also add/update the corresponding entry in `data/updates.json`.
-3. **Redundancy**: The `latestUpdate` object in `promises.json` is still used for sorting and local cards, but the ticker pulls from this master file. Always update both.
+3. **Synchronize Nested Elements**: If a detailed update contains nested `counterEvidence` or `additionalNotes`, you **must** copy these exact arrays into the master update object inside `updates.json` so that they render correctly in `/latest.html` (Public Record) and `/initiatives.html` (Other Initiatives).
+4. **Redundancy**: The `latestUpdate` object in `promises.json` is still used for sorting and local cards, but the ticker pulls from this master file. Always update both.
 
 ---
 
@@ -224,9 +253,11 @@ Format: `DD Month YYYY` — e.g. `"14 May 2026"`.
 > **This is the default situation.** The `data/updates/` directory only contains files for promises that have already received at least one update. Most promises are still `pending` and have no file yet. Creating a new file is normal — not exceptional.
 
 **Step 1 — Check if a file already exists:**
-```
+
+```text
 data/updates/<promise-id>.json
 ```
+
 The promise `id` from `promises.json` is the filename (e.g. `governance-3` → `governance-3.json`).
 
 **Step 2 — If it does NOT exist, create it:**
@@ -249,6 +280,7 @@ The promise `id` from `promises.json` is the filename (e.g. `governance-3` → `
 ```
 
 **Step 3 — Then update `promises.json` for that promise:**
+
 - Change `status` from `"pending"` to `"inprogress"` (or `"done"` if warranted).
 - Set `updateCount: 1`.
 - Set `counterCount: 0` (or `1` if you also add counterEvidence).
@@ -281,6 +313,7 @@ When not given specific links, use this workflow to discover what the government
 ### Step 1 — Scan recent government actions
 
 Search for news from the past 7–30 days using queries like:
+
 - `"West Bengal government" OR "Suvendu Adhikari" cabinet order site:thehindu.com OR site:businessstandard.com`
 - `"West Bengal" scheme gazette 2026`
 - `Suvendu Adhikari announcement [month] 2026`
@@ -290,6 +323,7 @@ Fetch each article via `https://fetch.itachiuchiha.workers.dev/?quest=<url>`.
 ### Step 2 — Scan the tracker for stale "Pending" promises
 
 Open `data/promises.json` and look for high-priority promises that are still `"pending"` but may have had government action — especially:
+
 - Promises with a `keyPromise` integer (headline commitments — higher public interest).
 - Promises in categories like `governance`, `women`, `youth`, `health` (typically first to move).
 - Promises with a 45-day deadline from the oath date (May 9, 2026 → deadline ~June 23, 2026).
@@ -301,6 +335,7 @@ Check `data/updates/` for which promises already have files. Promises **without*
 ### Step 4 — Prioritise by impact
 
 Update in this order:
+
 1. Promises where the 45-day cabinet deadline is approaching or has passed.
 2. Key Promises (keyPromise 1–15) with new government action.
 3. Any promise where a gazette notification or bill has been passed.
@@ -339,10 +374,12 @@ When a promise transitions to `"done"` (Fulfilled), the UI automatically shifts 
 To ensure high-performance loading times and an elite user experience, extensive updates are served via dedicated details pages (`v2/details/<promise-id>.html`) under specific trigger conditions:
 
 ### 1. Trigger Conditions
-- **Update Overflow**: If an active promise has **more than 5 updates**, the homepage preview only displays the latest 3 updates, with an invitation button leading to the dedicated page for complete history and legal evidence.
+
+- **Update Overflow**: If an active promise has **4 or more updates (>= 4)**, the homepage preview only displays the latest 3 updates, with an invitation button leading to the dedicated page for complete history and legal evidence.
 - **Status Resolution**: When a promise is marked as `"done"` (Fulfilled) or `"evaded"`, a direct **"Full Details"** button is made available for users to review the complete public history of how the status was resolved.
 
 ### 2. Layout & Typography Guidelines (Strict)
+
 - **No Headers or Footers**: Details pages must remain clean, focused, and free of global header mastheads or footers to highlight the core policy evidence directly.
 - **Top Navigation**: Displays a clean, minimal top bar containing exactly two links:
   - **Left**: `← Back to Tracker` (pointing directly to the root `../index.html` dashboard, clearing any hash parameters).
@@ -352,6 +389,7 @@ To ensure high-performance loading times and an elite user experience, extensive
 - **Lighter Fulfilled Cards**: Done detail cards (`.detail-card.done`) utilize a lighter mint-sage tint (`#F5FCF8`) to optimize text contrast and aesthetic appeal.
 
 ### 3. Document Preview Gallery & Pagination
+
 - Notice documents (such as gazettes and official circulars) are displayed inside a single, elegant `.doc-clean-card` centered on the details page.
 - **Maximum Dimensions**: Limited to a compact `480px` max-width to look clean, readable, and non-bulky on all desktop and mobile screens.
 - **Interactive Pagination**: If multiple document pages exist, a sleek, flat `.doc-pagination-bar` is rendered at the bottom of the card with active page markers (`Page 1`, `Page 2`, etc.). Clicking a button switches the active page instantly via a smooth fade transition (`opacity` shift over 150ms). No clumsy zoom or download icons.
@@ -390,23 +428,27 @@ The **"Full Details"** button on the homepage dashboard card must remain visuall
  
 > **Concept**: Significant government actions, administrative orders, or technology pilots that were NOT part of the official BJP manifesto. These are tracked on a separate page (`initiatives.html`) to avoid cluttering the primary accountability ledger.
  
-### ID Schema:
+### ID Schema
+
 - Format: `update-N` (e.g., `update-1`).
 - Numbering: Sequential based on addition (Oldest = 1).
- 
-### Workflow for "Other" Updates:
+
+### Workflow for "Other" Updates
+
 1. **State Layer**: Add/Update entry in `data/initiatives.json`.
 2. **Event Log**: Prepend the update to `data/initiative_updates.json`.
 3. **Evidence Layer**: Prepend to `data/updates/update-N.json`.
 4. **Ticker Integration**: These updates are automatically merged into the homepage ticker and `latest.html` via JS. They display with an **`INITIATIVE`** or **`Non-Manifesto`** tag.
- 
-### Promotion to Manifesto Tracker:
+
+### Promotion to Manifesto Tracker
+
 If an initiative is later identified as fulfilling or initiating a specific manifesto promise (e.g., a "Helpline Pilot" becomes the formal response to a "Women Safety" promise):
+
 1. **Move Data**: Transfer the update notes and sources to the corresponding `data/updates/<category-id>.json` file.
 2. **Sync Logs**: Remove the entry from `data/initiative_updates.json` and add it to `data/updates.json`.
 3. **Update State**: Update `data/promises.json` status to `inprogress` or `done` as warranted.
 4. **Delete Initiative**: Remove the ID from `data/initiatives.json` to prevent duplication.
- 
+
 ---
- 
-*Last updated: 18 May 2026*
+
+Last updated: 20 May 2026

@@ -1,0 +1,30 @@
+{
+  "updates": [
+    {
+      "note": "The state cabinet officially approved the revival of the Vivekananda Merit Scholarship Yojana to provide financial assistance to meritorious, economically weaker section (EWS) students. Chief Minister Suvendu Adhikari announced that all state government **financial support and scholarships will be completely caste-neutral and religion-neutral**, while separate religious allowances for imams and other religious figures will be discontinued.",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/education/west-bengal-cm-suvendu-adhikari-to-revive-vivekananda-merit-scholarship-yojana-to-support-ews-students-10696922/",
+          "name": "Indian Express · May 19, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label": "Debatable",
+          "text": "While the cabinet announced the 'revival' of the Vivekananda Merit Scholarship Yojana, official portal statistics show that the 'Swami Vivekananda Merit-cum-Means (SVMCM) Scholarship Scheme' has been continuously operational, **originally launched in the 2006-2007 academic year and renamed in 2013**. The official scholarship portal (svmcm.wb.gov.in) recorded hundreds of thousands of active applicants across school education, general degree, technical, and other professional courses in the 2025–2026 academic year alone, contesting the claim that the scheme was defunct or shut down prior to this cabinet decision.",
+          "sources": [
+            {
+              "url": "https://www.rbcec.in/wbhed.gov.in/page/scholarship.html",
+              "name": "Rishi Bankim Chandra Evening College Portal · Scholarship History"
+            },
+            {
+              "url": "https://svmcm.wb.gov.in/",
+              "name": "Swami Vivekananda Merit-cum-Means Scholarship Portal · 2025-2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}

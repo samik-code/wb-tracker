@@ -1,0 +1,80 @@
+{
+  "updates": [
+    {
+      "note": "Chief Minister Suvendu Adhikari launched a weekly 'Janatar Darbar' (public hearing) at the Salt Lake BJP office. Citizens directly raised grievances, including local syndicate extortion and forced purchases of building materials from local TMC leaders. The Chief Minister immediately directed the Bidhannagar police (DC) to investigate and take action on the complaints.\n\nHowever, critics and opposition leaders criticized hosting official public grievance forums at a political party office rather than a state administrative building, arguing it blurs the line between state governance and party operations.",
+      "sources": [
+        {
+          "url": "https://www.anandabazar.com/west-bengal/wb-cm-suvendu-adhikari-starts-janatar-darbar-at-salt-lake-bjp-office-dgtl/cid/1687631",
+          "name": "Anandabazar Patrika · May 18, 2026"
+        }
+      ]
+    },
+    {
+      "note": "Following street clashes in Kolkata's Park Circus and Rajabazar over the new government's restrictions on offering road prayers (namaz) and loudspeaker volumes, CM Suvendu Adhikari condemned the violence and confirmed that 40 arrests had been made. The clashes on May 17, 2026, injured ten police personnel and three CAPF members after protesters pelted stones and vandalized vehicles.\n\nThe protests erupted in response to the enforcement of the new state policy prohibiting religious activities on public roads to maintain traffic flow, alongside recent administrative demolition and eviction drives in the Tiljala and railway station areas.",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/cities/kolkata/kolkata-park-circus-protest-namaz-road-restrictions-clash-10694437/",
+          "name": "Indian Express · May 18, 2026"
+        },
+        {
+          "url": "https://timesofindia.indiatimes.com/india/wont-tolerate-attacks-on-police-west-bengal-cm-suvendu-adhikari-on-kolkata-violence-40-held/articleshow/131172194.cms",
+          "name": "Times of India · May 18, 2026"
+        }
+      ]
+    },
+    {
+      "note": "As a further step to restore public trust, Chief Minister Suvendu Adhikari approved CBI investigations into three significant recruitment scams involving teachers, municipalities, and cooperatives. These cases were reportedly stalled under the previous administration. Official filings or FIRs under the new government's mandate are awaited.",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/news/india/bengals-new-bjp-govt-sanctions-three-cases-including-teacher-recruitment-scam-for-cbi/articleshow/131061014.cms",
+          "name": "Economic Times · May 13, 2026"
+        }
+      ]
+    },
+    {
+      "note": "From May 11, 2026, West Bengal formally linked to the Bharatiya Nyaya Sanhita (BNS) 2023 and Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, replacing the IPC and CrPC. CM confirmed this took effect on the day of the first cabinet meeting, providing formal administrative reaffirmation to ensure proper on-ground implementation from now on. CM also stated that no existing social welfare schemes will be discontinued — they will continue with greater transparency.",
+      "sources": [
+        {
+          "url": "https://www.business-standard.com/india-news/bengal-to-transfer-land-to-bsf-for-fencing-along-bangladesh-border-cm-126051100527_1.html",
+          "name": "Business Standard · PTI · May 11, 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/what-suvendu-adhikari-decided-in-his-first-cabinet-meeting-as-bengal-chief-minister-dgtl/cid/1686214",
+          "name": "Anandabazar Patrika · May 11, 2026"
+        },
+        {
+          "url": "https://www.thehindu.com/news/national/west-bengal/west-bengal-chief-minister-suvendu-adhikari-chairs-first-cabinet-meeting-finalises-six-projects/article70964807.ece",
+          "name": "The Hindu · May 11, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label": "Debatable",
+          "text": "The Bharatiya Nyaya Sanhita (BNS) and Bharatiya Nagarik Suraksha Sanhita (BNSS) officially came into force nationwide on July 1, 2024, via a Central MHA Notification. Kolkata's first FIR under BNS was registered in July 2024, and the Aparajita Bill was passed in Sept 2024. While the Suvendu Adhikari government's May 11 announcement provides a fresh administrative push and formal reaffirmation for these laws, the legal framework had already been established and partially operational under the previous administration, making the claim of a new 'implementation' date debatable.",
+          "sources": [
+            {
+              "url": "https://www.mha.gov.in/sites/default/files/250883_english_01042024.pdf",
+              "name": "MHA Notification · Apr 2024"
+            },
+            {
+              "url": "https://timesofindia.indiatimes.com/city/kolkata/forgery-fir-in-kolkata-marks-bengals-first-case-under-bharatiya-nyay-sanhita/articleshow/111416798.cms",
+              "name": "Times of India · Jul 2, 2024"
+            },
+            {
+              "url": "https://www.nationalheraldindia.com/politics/bengal-new-bjp-govt-suvendu-adhikari-implements-already-existing-bns-promises-welfare-continuity-and-border-push",
+              "name": "National Herald · May 11, 2026"
+            },
+            {
+              "url": "https://prsindia.org/files/bills_acts/bills_states/west-bengal/2024/Bill14of2024WB.pdf",
+              "name": "PRS India · Sept 2024"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=ufCsk06EPXQ",
+              "name": "YouTube · Bill Amendment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

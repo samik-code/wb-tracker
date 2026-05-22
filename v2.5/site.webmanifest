@@ -1,0 +1,19 @@
+{
+  "name": "WB Accountability Tracker - Checking BJP Sarkar Promises",
+  "short_name": "WB Accountability",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#E8620A",
+  "background_color": "#FDFAF5",
+  "display": "standalone"
+}

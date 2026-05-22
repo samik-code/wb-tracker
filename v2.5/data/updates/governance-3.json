@@ -1,0 +1,69 @@
+{
+  "updates": [
+    {
+      "note": "The **Calcutta High Court** refused to stay the state's strict cattle slaughter rules ahead of Eid-ul-Azha. A division bench of **Chief Justice Sujoy Paul and Justice Partha Sarathi Sen** declined interim relief in PILs by TMC MLA Akhruzzaman and representing TMC MP Mahua Moitra, emphasizing the presumption of constitutionality of the 76-year-old statute.\n\nThe court ordered the State to amend its May 13 notice to explicitly clarify that public animal slaughter is prohibited, and that cow sacrifice is not an essential religious requirement under Islam, citing the Supreme Court's landmark **Mohd. Hanif Quareshi** precedent. All pending Section 12 exemptions must be decided within a strict **24-hour deadline**.",
+      "sources": [
+        {
+          "url": "https://www.livelaw.in/top-stories/calcutta-high-court-refuses-to-stall-bengals-cattle-slaughter-rules-ahead-of-eid-orders-state-to-clarify-cow-sacrifice-not-religious-requirement-535183",
+          "name": "LiveLaw · May 21, 2026"
+        },
+        {
+          "url": "https://www.indiatoday.in/india/story/cow-sacrifice-not-part-of-eid-calcutta-high-court-upholds-ban-on-cattle-slaughter-in-public-places-2915174-2026-05-21",
+          "name": "India Today · May 21, 2026"
+        },
+        {
+          "url": "https://www.anandabazar.com/west-bengal/calcutta-high-court-says-notification-of-wb-government-over-animal-slaughter-will-be-followed-dgtl/cid/1688315",
+          "name": "Anandabazar Patrika · May 21, 2026"
+        }
+      ]
+    },
+    {
+      "note": "State government enforced strict cattle slaughter regulations under the 1950 Act, mandating fitness certifications and banning public slaughter. To ensure a total crackdown, \"The notice barred public slaughter of these animals and said officials carrying out inspections to enforce the order should not face any obstruction\" (The Telegraph), with violators facing up to six months’ imprisonment.",
+      "sources": [
+        {
+          "url": "https://ard.wb.gov.in/upload/latestletters/1778746715482.pdf",
+          "name": "ARD Notification · May 14, 2026"
+        },
+        {
+          "url": "https://timesofindia.indiatimes.com/india/bengals-new-govt-bans-public-slaughter-of-cattle-and-buffalo-mandates-official-fitness-certificate/articleshow/131083140.cms",
+          "name": "Times of India · May 14, 2026"
+        },
+        {
+          "url": "https://www.telegraphindia.com/west-bengal/kolkata/government-issues-fresh-slaughter-rules-makes-fitness-certificate-mandatory-prnt/cid/2160456",
+          "name": "The Telegraph India · May 14, 2026"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "label": "Debatable",
+          "text": "\"Unlike some earlier notices, the public notice does not mention any exemption for slaughter for religious, medicinal or research purposes\" (The Telegraph). This omission has sparked debate regarding its impact on traditional customs and religious practices ahead of upcoming festivals.",
+          "sources": [
+            {
+              "url": "https://www.telegraphindia.com/west-bengal/kolkata/government-issues-fresh-slaughter-rules-makes-fitness-certificate-mandatory-prnt/cid/2160456",
+              "name": "The Telegraph India · May 14, 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "note": "CM Suvendu Adhikari directly ordered a crackdown on cattle smuggling and syndicate operations in a meeting with senior officials. He also directed authorities to verify beneficiaries of the 100-day rural employment scheme (MGNREGS) and identify fraudulent job card usage. ↗ Economic Times | May 12, 2026",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/news/elections/assembly-elections/west-bengal/suvendu-adhikari-directs-crackdown-on-syndicates-illegal-mining-cattle-smuggling-in-west-bengal/articleshow/131020939.cms",
+          "name": "Economic Times | May 12, 2026"
+        }
+      ]
+    },
+    {
+      "note": "Chief Secretary verbally instructed all district administrations, SPs, and CPs to crack down on illegal cattle transportation and markets, especially in border districts. Only licensed cattle haats will be allowed to function. ↗ Indian Express | May 11, 2026",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/cities/kolkata/west-bengal-bjp-govt-crackdown-syndicate-cattle-smuggling-10683469/",
+          "name": "Indian Express | May 11, 2026"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": []
+}
