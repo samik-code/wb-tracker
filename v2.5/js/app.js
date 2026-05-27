@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         history.replaceState(null, null, ' ');
       });
     }
+
+
   } catch (error) {
     console.error('Failed to load data:', error);
     document.getElementById('categories-container').innerHTML =
@@ -526,7 +528,7 @@ function openKeyPromiseGroup(keyNum) {
       }
 
       if (index === 0) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
       el.style.backgroundColor = 'rgba(232, 98, 10, 0.1)';
@@ -717,7 +719,7 @@ function scrollToPromise(id) {
   if (!el) return;
   const list = el.closest('.promise-list');
   if (list?.classList.contains('collapsed')) toggleCat(list.previousElementSibling);
-  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   el.style.backgroundColor = 'rgba(232, 98, 10, 0.1)';
   setTimeout(() => { el.style.backgroundColor = ''; }, 2000);
   togglePromiseDetails(id, true);

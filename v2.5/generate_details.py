@@ -277,9 +277,18 @@ def main():
 
     <!-- TIMELINE OF UPDATES -->
     <div class="detail-timeline-section">
-      <h3 class="detail-timeline-title">
-        📋 Comprehensive Tracking History
-      </h3>
+      <div class="detail-timeline-header-block">
+        <h3 class="detail-timeline-title">
+          📋 Comprehensive Tracking History
+        </h3>
+        <div class="detail-timeline-sort-wrap">
+          <span class="detail-timeline-sort-label">Sort:</span>
+          <select id="timeline-sort" onchange="sortTimeline(this.value)" class="detail-timeline-sort-select">
+            <option value="latest">Latest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
 
       <div class="detail-timeline-wrap">
 """
@@ -358,7 +367,7 @@ def main():
                     
                     html += f"""
         <!-- Update {update_num} -->
-        <div class="detail-timeline-item {get_status_class(status) if idx == 0 else ''}">
+        <div class="detail-timeline-item {get_status_class(status) if idx == 0 else ''}" data-order="{update_num}">
           <div class="detail-timeline-dot"></div>
           <div class="detail-timeline-card">
             <div class="detail-timeline-header">
@@ -523,7 +532,21 @@ def main():
     </div>
   </div>
   <script src="../js/share.js" defer></script>
-
+  <script>
+    function sortTimeline(order) {{
+      const container = document.querySelector('.detail-timeline-wrap');
+      if (!container) return;
+      const items = Array.from(container.querySelectorAll('.detail-timeline-item'));
+      
+      items.sort((a, b) => {{
+        const valA = parseInt(a.getAttribute('data-order'), 10);
+        const valB = parseInt(b.getAttribute('data-order'), 10);
+        return order === 'latest' ? valB - valA : valA - valB;
+      }});
+      
+      items.forEach(item => container.appendChild(item));
+    }}
+  </script>
 </body>
 </html>
 """

@@ -1082,6 +1082,7 @@ a:hover {
   border-bottom: 1px solid var(--rule-light);
   transition: background 0.15s ease;
   position: relative;
+  scroll-margin-top: 90px;
 }
 
 .promise-item:last-child {

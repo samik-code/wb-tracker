@@ -158,6 +158,162 @@
             padding: 60px 0;
             font-style: italic;
         }
+
+        /* ── Category filter bar ── */
+        .archive-filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .filter-chip {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 5px 13px;
+            border-radius: 20px;
+            border: 1px solid var(--rule);
+            background: var(--surface);
+            color: var(--ink-light);
+            cursor: pointer;
+            transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .filter-chip:hover {
+            border-color: var(--saffron-mid);
+            color: var(--saffron-dark);
+            background: var(--saffron-pale);
+        }
+
+        .filter-chip.active {
+            background: var(--saffron);
+            border-color: var(--saffron);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(184, 77, 8, 0.22);
+        }
+
+        .filter-chip.active:hover {
+            background: var(--saffron-dark);
+            border-color: var(--saffron-dark);
+            color: #fff;
+        }
+
+        /* ── Meta Controls Row (Tip on left, Filter on right) ── */
+        .archive-meta-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 8px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--rule-light);
+            padding-bottom: 16px;
+        }
+
+        .archive-tip-col {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .archive-tip-text {
+            font-family: var(--font-ui);
+            font-size: 11.5px;
+            color: var(--saffron-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .archive-filter-col {
+            display: flex;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        #filter-trigger-btn {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 7px 15px;
+            border-radius: 4px;
+            border: 1px solid var(--rule);
+            background: var(--surface);
+            color: var(--ink-mid);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #filter-trigger-btn:hover {
+            border-color: var(--saffron-mid);
+            color: var(--saffron-dark);
+            background: var(--saffron-pale);
+        }
+
+        #filter-trigger-btn.active-filter {
+            background: var(--saffron) !important;
+            border-color: var(--saffron) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 12px rgba(184, 77, 8, 0.22);
+        }
+
+        #filter-trigger-btn.active-filter:hover {
+            background: var(--saffron-dark) !important;
+            border-color: var(--saffron-dark) !important;
+            color: #fff !important;
+        }
+
+        #filter-arrow {
+            transition: transform 0.2s ease;
+            font-size: 8px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .archive-meta-controls-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                margin-top: 12px;
+                margin-bottom: 24px;
+                padding-bottom: 20px;
+            }
+            .archive-tip-col {
+                min-width: 100%;
+            }
+            .archive-tip-text {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+            .archive-filter-col {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            #filter-trigger-btn {
+                width: 100%;
+                justify-content: space-between;
+                padding: 10px 16px;
+                font-size: 11.5px;
+                border-radius: 6px;
+                box-shadow: 0 1px 2px rgba(26, 18, 8, 0.02);
+            }
+        }
     </style>
 </head>
 
@@ -170,10 +326,28 @@
 
         <header class="archive-header">
             <h1 class="archive-title">Public Record</h1>
-            <p style="font-family: var(--font-sans); font-size: 16.5px; color: var(--ink-faint); font-style: italic;">
+            <p style="font-family: var(--font-sans); font-size: 16.5px; color: var(--ink-faint); font-style: italic; margin-bottom: 8px;">
                 A chronological archive of every administrative update and policy development.
             </p>
         </header>
+
+        <div class="archive-meta-controls-row">
+            <div class="archive-tip-col">
+                <p class="archive-tip-text">
+                    💡 Tip: Click on any update title to view its corresponding manifesto promise page.
+                </p>
+            </div>
+            <div class="archive-filter-col">
+                <button id="filter-trigger-btn">
+                    <span>Filter by Category</span>
+                    <span id="filter-arrow">▼</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="archive-filter-bar" id="archive-filter-bar" style="display:none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+            <!-- Populated by JS after data loads -->
+        </div>
 
         <div class="archive-timeline" id="archive-timeline">
             <div class="loading">Loading archive...</div>
@@ -196,14 +370,20 @@
 
     <script>
         let allUpdates = [];
+        let filteredUpdates = [];
         let displayedCount = 0;
+        let activeCategory = 'all';
         const ITEMS_PER_PAGE = 20;
+
+        // Category metadata from meta.json (keyed by id)
+        let categoryMap = {};
 
         async function init() {
             try {
-                const [updatesRes, initiativesRes] = await Promise.all([
+                const [updatesRes, initiativesRes, metaRes] = await Promise.all([
                     fetch('data/updates.json'),
-                    fetch('data/initiative_updates.json')
+                    fetch('data/initiative_updates.json'),
+                    fetch('data/meta.json')
                 ]);
 
                 let updates = [];
@@ -211,6 +391,10 @@
 
                 if (updatesRes.ok) updates = await updatesRes.json();
                 if (initiativesRes.ok) initiatives = await initiativesRes.json();
+                if (metaRes.ok) {
+                    const meta = await metaRes.json();
+                    meta.categories.forEach(c => { categoryMap[c.id] = c; });
+                }
 
                 // Mark initiatives so we can link them differently
                 initiatives = initiatives.map(i => ({ ...i, isInitiative: true }));
@@ -220,7 +404,8 @@
                 // Sort by date desc
                 allUpdates.sort((a, b) => b.date.localeCompare(a.date));
 
-                renderNextBatch();
+                renderFilterBar();
+                applyFilter('all');
 
                 document.getElementById('load-more-btn').addEventListener('click', renderNextBatch);
             } catch (e) {
@@ -238,6 +423,104 @@
                 "'": '&#39;'
             }[char]));
         }
+
+        function updateFilterTriggerUI() {
+            const triggerBtn = document.getElementById('filter-trigger-btn');
+            const arrow = document.getElementById('filter-arrow');
+            const bar = document.getElementById('archive-filter-bar');
+            if (!triggerBtn) return;
+
+            const isOpen = bar && (bar.style.display === 'flex');
+            const isFilterActive = activeCategory !== 'all';
+
+            triggerBtn.classList.remove('active-filter');
+
+            if (isFilterActive) {
+                triggerBtn.classList.add('active-filter');
+                let labelText = 'Filter by Category';
+                if (activeCategory === 'non-manifesto') {
+                    labelText = 'Filter: Non-Manifesto';
+                } else if (categoryMap[activeCategory]) {
+                    labelText = `Filter: ${categoryMap[activeCategory].icon} ${categoryMap[activeCategory].title.split(' ')[0]}`;
+                }
+                triggerBtn.querySelector('span').textContent = labelText;
+                
+                triggerBtn.style.borderColor = '';
+                triggerBtn.style.color = '';
+                triggerBtn.style.background = '';
+            } else {
+                triggerBtn.querySelector('span').textContent = 'Filter by Category';
+                if (isOpen) {
+                    triggerBtn.style.borderColor = 'var(--saffron)';
+                    triggerBtn.style.color = 'var(--saffron-dark)';
+                    triggerBtn.style.background = 'var(--saffron-pale)';
+                } else {
+                    triggerBtn.style.borderColor = '';
+                    triggerBtn.style.color = '';
+                    triggerBtn.style.background = '';
+                }
+            }
+
+            if (arrow) {
+                arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+                arrow.style.color = isFilterActive ? '#fff' : (isOpen ? 'var(--saffron-dark)' : '');
+            }
+        }
+
+        function renderFilterBar() {
+            const bar = document.getElementById('archive-filter-bar');
+            if (!bar) return;
+
+            // Only show categories that actually appear in the loaded data
+            const usedCats = new Set(allUpdates.map(u => u.category));
+            const orderedCats = Object.values(categoryMap).filter(c => usedCats.has(c.id));
+
+            bar.innerHTML = [
+                `<button class="filter-chip active" data-cat="all">All</button>`,
+                ...orderedCats.map(c =>
+                    `<button class="filter-chip" data-cat="${escapeHtml(c.id)}">${escapeHtml(c.icon)} ${escapeHtml(c.title.split(' ')[0])}</button>`
+                ),
+                `<button class="filter-chip" data-cat="non-manifesto">📢 Non-Manifesto</button>`
+            ].join('');
+
+            // Toggle filter bar display on trigger button click
+            const triggerBtn = document.getElementById('filter-trigger-btn');
+            if (triggerBtn) {
+                triggerBtn.addEventListener('click', () => {
+                    const isHidden = bar.style.display === 'none' || !bar.style.display;
+                    bar.style.display = isHidden ? 'flex' : 'none';
+                    updateFilterTriggerUI();
+                });
+            }
+
+            bar.addEventListener('click', e => {
+                const btn = e.target.closest('.filter-chip');
+                if (!btn) return;
+                bar.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                applyFilter(btn.dataset.cat);
+                
+                // AUTOCLOSE dropdown on select
+                bar.style.display = 'none';
+                updateFilterTriggerUI();
+            });
+        }
+
+        function applyFilter(cat) {
+            activeCategory = cat;
+            if (cat === 'all') {
+                filteredUpdates = allUpdates;
+            } else if (cat === 'non-manifesto') {
+                filteredUpdates = allUpdates.filter(u => u.isInitiative);
+            } else {
+                filteredUpdates = allUpdates.filter(u => u.category === cat);
+            }
+            displayedCount = 0;
+            document.getElementById('archive-timeline').innerHTML = '';
+            renderNextBatch();
+            updateFilterTriggerUI();
+        }
+
 
         function splitIntoSentences(text) {
             const sentences = [];
@@ -354,7 +637,7 @@
             const timeline = document.getElementById('archive-timeline');
             if (displayedCount === 0) timeline.innerHTML = '';
 
-            const nextBatch = allUpdates.slice(displayedCount, displayedCount + ITEMS_PER_PAGE);
+            const nextBatch = filteredUpdates.slice(displayedCount, displayedCount + ITEMS_PER_PAGE);
 
             // Group by date for the new batch
             const groups = nextBatch.reduce((acc, u) => {
@@ -441,7 +724,7 @@
             displayedCount += nextBatch.length;
 
             const loadMoreContainer = document.getElementById('load-more-container');
-            if (displayedCount < allUpdates.length) {
+            if (displayedCount < filteredUpdates.length) {
                 loadMoreContainer.style.display = 'block';
             } else {
                 loadMoreContainer.style.display = 'none';
@@ -449,6 +732,7 @@
         }
 
         init();
+
     </script>
     <script src="js/share.js" defer></script>
 </body>
