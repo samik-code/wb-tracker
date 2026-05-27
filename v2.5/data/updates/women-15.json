@@ -1,0 +1,38 @@
+{
+  "updates": [
+    {
+      "note": "Chief Minister Suvendu Adhikari announced that the state will launch its free HPV vaccination campaign on May 30, 2026, starting from the Bidhannagar Sub Divisional Hospital in Kolkata. Over seven lakh vaccine doses have been allocated to the state by the central government for this drive.",
+      "sources": [
+        {
+          "url": "https://newsonair.gov.in/hpv-vaccination-drive-to-begin-in-west-bengal-from-30th-may/",
+          "name": "Akashvani News · May 23, 2026"
+        }
+      ]
+    }
+  ],
+  "counterEvidence": [],
+  "additionalNotes": [
+    {
+      "label": "Safety & Trial Debates",
+      "text": "The vaccine has faced historical scrutiny: in 2010, India suspended a demonstration project following participant deaths and subsequent exposure of severe ethical lapses in enrolling vulnerable tribal girls. Additionally, in June 2013, Japan suspended its active recommendation for the vaccine following reports of alleged chronic pain and neurological events; a subsequent report in The Lancet documented that this suspension caused vaccination completion rates to plummet from over 70% to just 0.6% by March 2014, despite safety panels concluding no causal association existed. However, following extensive safety reassurances, the Japanese government officially resumed proactive routine HPV vaccination recommendations in April 2022 alongside catch-up vaccination drives, with recent studies in Scientific Reports (2025) showing a strong recovery in clinical vaccine confidence and uptake.",
+      "sources": [
+        {
+          "url": "https://ijme.in/articles/deaths-in-a-trial-of-the-hpv-vaccine/?galley=html",
+          "name": "Indian Journal of Medical Ethics · July 2010"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25483472/",
+          "name": "Human Vaccines & Immunotherapeutics · Dec 2014"
+        },
+        {
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(15)61152-7/fulltext",
+          "name": "The Lancet · Hanley et al. · Jun 27, 2015"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41598-025-02980-2",
+          "name": "Scientific Reports · Nakai et al. · May 29, 2025"
+        }
+      ]
+    }
+  ]
+}

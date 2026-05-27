@@ -1,5 +1,188 @@
 [
   {
+    "promiseId": "women-1",
+    "title": "Annapurna Yojana Forms Released & Transition Detailed",
+    "date": "2026-05-27",
+    "category": "women",
+    "note": "Chief Minister Suvendu Adhikari officially released the online and offline application forms for the Annapurna Bhandar (Yojana) scheme, launching a 90-day registration and verification window starting June 1, 2026. Overseen by the Chief Secretary and Finance Secretary, the audit aims to verify eligibility and eliminate approximately 30 lakh duplicate or ineligible records currently migrated from the previous Lakshmir Bhandar scheme. Women aged 25–60 registering by June 2 will receive their first ₹3,000 disbursement in June, with older scheme payouts continuing in the interim to avoid disruption. While excluding income tax payees, government employees, and those receiving permanent salaries or pensions from statutory or aided bodies, the scheme explicitly accommodates CAA citizenship applicants and individuals with pending voter tribunal appeals. Print forms have been published on the official social security portal in both English and Bengali, though the online registration portal remains inactive.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/press-conference-of-chief-minister-suvendu-adhikari-live-updates-dgtl/cid/1689486",
+        "name": "Anandabazar Patrika · May 27, 2026"
+      },
+      {
+        "url": "https://bengali.abplive.com/district/suvendu-adhikari-west-bengal-annapurna-yojana-form-online-offline-details-1180273",
+        "name": "ABP Ananda · May 27, 2026"
+      },
+      {
+        "url": "https://socialsecurity.wb.gov.in/public/pdf/Annapurna%20Yojana%20Family%20Level%20Data%20Collection%20Form%20final.pdf",
+        "name": "Govt of West Bengal · Annapurna Yojana Form (English) · May 27, 2026"
+      },
+      {
+        "url": "https://socialsecurity.wb.gov.in/public/pdf/Annapurna_Yojana_Family_Level_Data_Collection_Form.pdf",
+        "name": "Govt of West Bengal · Annapurna Yojana Form (Bengali) · May 27, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "national-security-1",
+    "title": "First Holding Centre Opened in Murshidabad",
+    "date": "2026-05-26",
+    "category": "national-security",
+    "note": "Following a government order on May 23, 2026, the state's first holding centre for suspected illegal immigrants and released foreign prisoners was opened in Murshidabad's Bahadurpur, with three suspected illegal Bangladeshi nationals already detained there. Work has also commenced to set up another facility in Malda's English Bazar town. The centers are operated by district police and civic volunteers under MHA guidelines while legal status verification and deportation enquiries are conducted.",
+    "sources": [
+      {
+        "url": "https://indianexpress.com/article/cities/kolkata/2-days-after-govt-order-1-detention-facility-opens-in-bengal-another-on-way-10707196/",
+        "name": "Indian Express · May 26, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "governance-1",
+    "title": "30 Kolkata Police Officers Under ED Scanner",
+    "date": "2026-05-26",
+    "category": "governance",
+    "note": "The Enforcement Directorate (ED) placed nearly 30 Kolkata Police personnel of different ranks under scanner in its ongoing land-grabbing investigation. The officers are suspected of assisting a criminal syndicate, led by Sona Pappu and former DCP Shantanu Sinha Biswas, which allegedly used police influence and intimidation to coerce senior citizens into selling valuable properties below market rates.",
+    "sources": [
+      {
+        "url": "https://www.hindustantimes.com/cities/kolkata-news/nearly-30-kolkata-police-officers-under-ed-scanner-in-land-grab-case-101779699849249.html",
+        "name": "Hindustan Times · May 25, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "women-15",
+    "title": "Free HPV Vaccination Drive Announced",
+    "date": "2026-05-25",
+    "category": "women",
+    "note": "Chief Minister Suvendu Adhikari announced that the free HPV vaccination campaign will start in West Bengal on May 30, 2026, starting from the Bidhannagar Sub Divisional Hospital in Kolkata. Over seven lakh vaccine doses have been allocated to the state by the central government for this drive.",
+    "sources": [
+      {
+        "url": "https://newsonair.gov.in/hpv-vaccination-drive-to-begin-in-west-bengal-from-30th-may/",
+        "name": "Akashvani News · May 23, 2026"
+      }
+    ],
+    "additionalNotes": [
+      {
+        "label": "Safety & Trial Debates",
+        "text": "The vaccine has faced historical scrutiny: in 2010, India suspended a demonstration project following participant deaths and subsequent exposure of severe ethical lapses in enrolling vulnerable tribal girls. Additionally, in June 2013, Japan suspended its active recommendation for the vaccine following reports of alleged chronic pain and neurological events; a subsequent report in The Lancet documented that this suspension caused vaccination completion rates to plummet from over 70% to just 0.6% by March 2014, despite safety panels concluding no causal association existed. However, following extensive safety reassurances, the Japanese government officially resumed proactive routine HPV vaccination recommendations in April 2022 alongside catch-up vaccination drives, with recent studies in Scientific Reports (2025) showing a strong recovery in clinical vaccine confidence and uptake.",
+        "sources": [
+          {
+            "url": "https://ijme.in/articles/deaths-in-a-trial-of-the-hpv-vaccine/?galley=html",
+            "name": "Indian Journal of Medical Ethics · July 2010"
+          },
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25483472/",
+            "name": "Human Vaccines & Immunotherapeutics · Dec 2014"
+          },
+          {
+            "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(15)61152-7/fulltext",
+            "name": "The Lancet · Hanley et al. · Jun 27, 2015"
+          },
+          {
+            "url": "https://www.nature.com/articles/s41598-025-02980-2",
+            "name": "Scientific Reports · Nakai et al. · May 29, 2025"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "promiseId": "national-security-1",
+    "title": "Directives to Establish District Holding Centres",
+    "date": "2026-05-24",
+    "category": "national-security",
+    "note": "The West Bengal government issued directives to the state police DGP, district DMs, SPs, and police commissioners to establish holding centres in every district to detain suspected illegal Bangladeshi and Rohingya immigrants. Under these guidelines, suspects can be detained for up to 30 days while their legal status and biometric data are verified. Identified illegal immigrants and foreign nationals released from state prisons will be held at these centres before being handed over to the BSF for deportation.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/west-bengal-government-orders-making-of-holding-centres-to-keep-illegal-immigrants-dgtl/cid/1688878",
+        "name": "Anandabazar Patrika · May 24, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "governance-6",
+    "title": "Nabanna Orders Departmental Vacancy Reports",
+    "date": "2026-05-24",
+    "category": "governance",
+    "note": "The Finance Department (Audit Branch) issued a circular directing all administrative departments, directorates, and regional offices to submit a detailed report on all vacant posts by June 3, 2026. The departments must prepare reports in a designated Excel format categorized by offices, including data up to May 1, 2026, and provide justifications for any vacancies proposed for direct recruitment. This review aims to accelerate stalled recruitment processes and address staff shortages across state departments.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/nabanna-seeks-reports-on-vacancies-from-all-departments-by-june-3-dgtl/cid/1688778",
+        "name": "Anandabazar Patrika · May 23, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "women-7",
+    "title": "Kolkata Police Plan All-Women Battalion",
+    "date": "2026-05-24",
+    "category": "women",
+    "note": "Lalbazar is planning to establish a dedicated all-women battalion within the Kolkata Police to maintain law and order and handle female crowds during public protests. The Kolkata Police Commissioner has assigned two senior officers to coordinate the plan, which also includes forming a 20-member female RAF squad in each of the ten divisions and training the 'Winners' team in self-defense. To address current staff shortages, the department will initiate recruitment drives for female police personnel.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/lalbazar-is-planning-to-form-a-battalion-with-female-police-personnel-to-maintain-law-and-order-prnt/cid/1688600",
+        "name": "Anandabazar Patrika · May 23, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "governance-6",
+    "title": "New Recruitment Bill and System Reforms Announced",
+    "date": "2026-05-23",
+    "category": "governance",
+    "note": "Chief Minister Suvendu Adhikari announced that the state government is drafting a new recruitment bill to be introduced in the next assembly session to ensure transparent, merit-based state recruitments. The proposed reforms include reducing the weightage of oral/viva marks to prevent corruption and mandating that candidates receive carbon copies of their OMR sheets. The state's recruitment status transitions to in-progress as the administration prepares this legislative framework.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/west-bengal-cm-suvendu-adhikari-promises-neat-clean-recruitment-process-will-be-arranged-in-the-state-in-future-dgtl/cid/1688620",
+        "name": "Anandabazar Patrika · May 23, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "governance-5",
+    "title": "Crackdown on TMC leaders in State-Wide Syndicate Probe",
+    "date": "2026-05-23",
+    "category": "governance",
+    "note": "Over 70 local leaders belonging to the opposition Trinamool Congress (TMC) were arrested across West Bengal over a seven-day period in a massive statewide police crackdown on syndicate activities, extortion, illegal land grabbing, and local violence. Prominent arrests on May 23, 2026, include KMC councillor Sudip Polley, Bidhannagar councillor Samrat Barua on extortion charges, and Nadia leader Ramjan Ali Mondal for allegedly running a coercive building materials syndicate. State police are continuing raids to dismantle these extortion syndicates while opposition leaders claim the arrests are politically motivated.",
+    "sources": [
+      {
+        "url": "https://www.anandabazar.com/west-bengal/tmc-leaders-are-being-arrested-by-police-for-the-same-allegations-dgtld/cid/1688759",
+        "name": "Anandabazar Patrika · May 23, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "infrastructure-5",
+    "title": "State Directive to Hand Over Land for 61 Railway Projects",
+    "date": "2026-05-23",
+    "category": "infrastructure",
+    "note": "Chief Minister Suvendu Adhikari announced that the state government has directed all relevant departments to immediately hand over land to railway authorities to facilitate the completion of 61 stalled railway projects, including the Hili and Nandigram projects. The administration also cleared long-pending police permissions to resume construction of the New Garia-Airport metro viaduct at Chingrighata crossing. State departments are currently coordinating the land transfer process to resolve these bottlenecks.",
+    "sources": [
+      {
+        "url": "https://economictimes.indiatimes.com/news/politics-and-nation/bengal-govt-depts-asked-to-hand-over-land-to-railways-for-completion-of-61-stalled-projects-cm-suvendu-adhikari/articleshow/131277338.cms",
+        "name": "Economic Times · May 23, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "health-1",
+    "title": "Ayushman Bharat July Rollout & ₹3,000 Cr Healthcare Sanction",
+    "date": "2026-05-23",
+    "category": "health",
+    "note": "Chief Minister Suvendu Adhikari announced a ₹3,000 crore Central sanction for public healthcare revamp, including ₹976 crore for the Ayushman Bharat scheme. Beneficiary enrolment has commenced, with plans to migrate six crore Swasthya Sathi cardholders and distribute Ayushman Bharat cards starting July 2026.\n\nAn agreement to integrate the state into the Ayushman Arogya Mandir network will be signed in Delhi in the first week of June to cover over one crore migrant workers. Additionally, a transparent recruitment drive will be launched to fill vacant doctor and nurse positions within three months.",
+    "sources": [
+      {
+        "url": "https://theprint.in/india/bengal-gets-rs-3000-cr-for-healthcare-revamp-ayushman-bharat-card-rollout-from-july-suvendu/2939509/",
+        "name": "ThePrint · PTI · May 23, 2026"
+      },
+      {
+        "url": "https://www.hindustantimes.com/cities/kolkata-news/bengal-gets-rs-3-000-cr-for-healthcare-revamp-ayushman-bharat-card-rollout-from-july-suvendu-101779529888340.html",
+        "name": "Hindustan Times · May 23, 2026"
+      }
+    ]
+  },
+  {
     "promiseId": "women-10",
     "title": "Transport Department Notifies Free Women's Travel",
     "date": "2026-05-22",

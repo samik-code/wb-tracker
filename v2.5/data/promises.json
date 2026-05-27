@@ -6,12 +6,12 @@
     "text": "Zero-tolerance policy towards infiltration — implement the \"Detect, Delete and Deport\" model and take strict measures to prevent illegal infiltration and address silent demographic invasion.",
     "highlight": "Zero-tolerance policy towards infiltration",
     "status": "inprogress",
-    "updateCount": 2,
+    "updateCount": 4,
     "counterCount": 1,
     "latestUpdate": {
-      "summary": "Chief Minister Suvendu Adhikari issued administrative directives to the Howrah police and the RPF to bypass judicial...",
+      "summary": "Following a government order on May 23, 2026, the state's first holding centre for suspected illegal immigrants and...",
       "sourceCount": 1,
-      "date": "2026-05-22"
+      "date": "2026-05-26"
     },
     "keyPromise": 1
   },
@@ -38,12 +38,12 @@
     "text": "Release a comprehensive White Paper detailing 15 years of corruption, administrative opacity, financial mismanagement, and breakdown of law and order under TMC. Identify and bring culprits to justice.",
     "highlight": "White Paper exposing 15 years of TMC corruption and breakdown of law and order",
     "status": "inprogress",
-    "updateCount": 6,
+    "updateCount": 7,
     "counterCount": 0,
     "latestUpdate": {
-      "summary": "The Enforcement Directorate (ED) conducted fresh searches at nine premises across Kolkata and Murshidabad in conne...",
+      "summary": "The Enforcement Directorate (ED) placed nearly 30 Kolkata Police personnel of different ranks under scanner in its on...",
       "sourceCount": 1,
-      "date": "2026-05-22"
+      "date": "2026-05-26"
     },
     "keyPromise": 2
   },
@@ -99,12 +99,12 @@
     "text": "Put an end to mafia rule in West Bengal — specifically targeting the illegal trade of coal, sand, stone, and heinous crimes of women and child trafficking.",
     "highlight": "End syndicate activities — curtailing \"cut money\" culture and mafia rule",
     "status": "inprogress",
-    "updateCount": 2,
+    "updateCount": 3,
     "counterCount": 0,
     "latestUpdate": {
-      "summary": "Chief Secretary ordered immediate closure of all unauthorized toll gates and illegal collection points across the state....",
+      "summary": "Over 70 local leaders belonging to the opposition Trinamool Congress (TMC) were arrested across West Bengal in a statewid...",
       "sourceCount": 1,
-      "date": "2026-05-13"
+      "date": "2026-05-23"
     },
     "keyPromise": 3
   },
@@ -114,13 +114,13 @@
     "number": 6,
     "text": "Fill all vacancies across various state departments through transparent, merit-based recruitment drives by December 2026.",
     "highlight": "Fill all vacancies",
-    "status": "pending",
-    "updateCount": 1,
+    "status": "inprogress",
+    "updateCount": 3,
     "counterCount": 0,
     "latestUpdate": {
-      "summary": "Finance Department Order No. 1631-F(H) dated 11.05.2026 directs the immediate termination of all re-employment beyond a...",
+      "summary": "The Finance Department (Audit Branch) issued a circular directing all administrative departments, directorates, and rege...",
       "sourceCount": 1,
-      "date": "2026-05-11"
+      "date": "2026-05-24"
     },
     "keyPromise": null
   },
@@ -192,13 +192,13 @@
     "status": "done",
     "resolution": "Done (On Paper)",
     "resolutionNote": "Marked 'Done (On Paper)' as the scheme is officially gazetted. Once disbursements begin on the ground (starting June 1, 2026), the status will be updated to 'Done & Operational'.",
-    "updateCount": 3,
+    "updateCount": 4,
     "counterCount": 0,
     "noteCount": 1,
     "latestUpdate": {
-      "summary": "Formal gazette notification No. 2411-WCD/O/AB-4/2026 (dated 19 May 2026) officially constitutes the Annapurna Yojana, confirming ₹3,000/m",
-      "sourceCount": 1,
-      "date": "2026-05-19"
+      "summary": "Chief Minister Suvendu Adhikari officially released the online and offline application forms for the Annapurna Bhandar (Yo...",
+      "sourceCount": 4,
+      "date": "2026-05-27"
     },
     "keyPromise": 7
   },
@@ -273,9 +273,13 @@
     "text": "Establish two all-women battalions in the State Reserve Police Force — named after Matangini Hazra and Rani Shiromani.",
     "highlight": "two all-women battalions",
     "status": "pending",
-    "updateCount": 0,
+    "updateCount": 1,
     "counterCount": 0,
-    "latestUpdate": null,
+    "latestUpdate": {
+      "summary": "Lalbazar is planning to establish a dedicated all-women battalion within the Kolkata Police to maintain law and order a...",
+      "sourceCount": 1,
+      "date": "2026-05-24"
+    },
     "keyPromise": null
   },
   {
@@ -375,10 +379,15 @@
     "number": 15,
     "text": "Provide free HPV vaccination to all girls and women below the age of 40.",
     "highlight": "free HPV vaccination",
-    "status": "pending",
-    "updateCount": 0,
+    "status": "inprogress",
+    "updateCount": 1,
     "counterCount": 0,
-    "latestUpdate": null,
+    "noteCount": 1,
+    "latestUpdate": {
+      "summary": "Chief Minister Suvendu Adhikari announced that the state will launch its free HPV vaccination campaign on May 30, 20...",
+      "sourceCount": 1,
+      "date": "2026-05-25"
+    },
     "keyPromise": null
   },
   {
@@ -1091,11 +1100,12 @@
     "text": "Implement the Ayushman Bharat scheme — free medical coverage of up to ₹5 lakh for every citizen. Ensure all existing benefits and facilities remain fully operational and uninterrupted.",
     "highlight": "Implement Ayushman Bharat scheme and build world-class AIIMS/IIT/IIM in North Bengal",
     "status": "inprogress",
-    "updateCount": 1,
+    "updateCount": 2,
     "counterCount": 0,
     "latestUpdate": {
-      "summary": "Implementation ordered in the first cabinet meeting at Nabanna on May 11, 2026. CM confirmed rollout of Ayushman Bharat ...",
-      "sourceCount": 3
+      "summary": "Chief Minister Suvendu Adhikari announced a ₹3,000 crore Central sanction for public healthcare revamp, including...",
+      "sourceCount": 2,
+      "date": "2026-05-23"
     },
     "keyPromise": 13
   },
@@ -1623,12 +1633,12 @@
     "text": "Resolve all pending land-related hurdles to expedite the completion of 61 stalled railway projects in West Bengal.",
     "highlight": "",
     "status": "inprogress",
-    "updateCount": 1,
+    "updateCount": 2,
     "counterCount": 0,
     "latestUpdate": {
-      "summary": "Union Railway Minister Ashwini Vaishnaw approved multiple railway projects for West Bengal, including a new Kolkata-Jaip...",
-      "sourceCount": 2,
-      "date": "2026-05-15"
+      "summary": "Chief Minister Suvendu Adhikari announced that the state government has directed departments to hand over land for 61...",
+      "sourceCount": 1,
+      "date": "2026-05-23"
     },
     "keyPromise": null
   },

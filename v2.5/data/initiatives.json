@@ -77,5 +77,45 @@
       "date": "2026-05-21",
       "sourceCount": 1
     }
+  },
+  {
+    "id": "update-7",
+    "category": "health",
+    "title": "Colour-Coded ID Cards at State-Run Hospitals",
+    "text": "Introduction of colour-coded identity cards for all employees at state-run hospitals to prevent unauthorised entry of middlemen and touts.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "The Health Department is introducing colour-coded identity cards for all state-run hospital staff to prevent unauthorized access by middlemen.",
+      "date": "2026-05-26",
+      "sourceCount": 1
+    }
+  },
+  {
+    "id": "update-8",
+    "category": "inclusive",
+    "title": "Subsidised ₹5 Fish-Rice Canteens",
+    "text": "Statewide rollout of subsidised fish-and-rice meals priced at ₹5 across approximately 400 dedicated public canteens.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "Chief Minister Suvendu Adhikari announced the statewide introduction of fish-and-rice meals at a highly subsidised rate of ₹5...",
+      "date": "2026-05-26",
+      "sourceCount": 1
+    }
+  },
+  {
+    "id": "update-9",
+    "category": "governance",
+    "title": "Liquor Shop Radius Restrictions",
+    "text": "New regulations prohibiting liquor shops from operating within a one-kilometre radius of educational institutions and places of worship.",
+    "status": "inprogress",
+    "updateCount": 1,
+    "latestUpdate": {
+      "summary": "Chief Minister Suvendu Adhikari announced strict new regulations prohibiting the operation of liquor shops within a one-...",
+      "date": "2026-05-26",
+      "sourceCount": 1
+    }
   }
 ]
+

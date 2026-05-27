@@ -34,8 +34,8 @@
   /* Rich warm brown mid-tone */
   --ink-light: #6B5540;
   /* Warm editorial secondary text */
-  --ink-faint: #9C8878;
-  /* Warm muted caption color */
+  --ink-faint: #796556;
+  /* Warm muted caption color (darker for WCAG AA contrast) */
 
   /* ── Surfaces ── */
   --paper: #FDFAF5;
@@ -94,6 +94,8 @@ body {
   background: var(--saffron);
   color: #fff;
 }
+
+
 
 button {
   font: inherit;
@@ -220,7 +222,7 @@ a:hover {
 .masthead-sub {
   margin-top: 10px;
   font-size: 17px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.8);
   font-style: italic;
   font-family: var(--font-sans);
   letter-spacing: 0.01em;
@@ -262,7 +264,7 @@ a:hover {
   font-size: 9.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
   font-weight: 600;
 }
 
@@ -466,11 +468,32 @@ a:hover {
   background: var(--ink);
   color: #fff;
   padding: 22px 32px;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px;
   border-bottom: 3px solid var(--saffron);
+}
+
+.timer-context-label {
+  font-family: var(--font-ui);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.timer-blocks {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 32px;
+  flex-wrap: nowrap !important;
+  width: auto !important;
+  max-width: 100% !important;
 }
 
 .timer-block {
@@ -2473,7 +2496,12 @@ a:hover {
 
   .timer-section {
     padding: 16px 12px;
-    gap: 6px 14px;
+    gap: 12px;
+  }
+
+  .timer-blocks {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
   }
 
   .timer-num {
@@ -2691,4 +2719,20 @@ a:hover {
   border-left: 4px solid var(--saffron);
   font-size: 13.5px;
   line-height: 1.58;
+}
+
+.resolution-note-simple {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-light);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.resolution-note-simple strong {
+  font-weight: 600;
+  color: var(--ink-mid);
 }

@@ -190,6 +190,30 @@ def main():
   <title>Promise Detail: {escape_html(p['highlight'] or p['text'][:40])} — WB Accountability Tracker</title>
   
   <meta name="description" content="Detailed historical tracking, timeline, and supporting evidence for BJP Sarkar manifesto promise {escape_html(p['id'])}: {escape_html(p['text'][:140])}...">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E8620A">
+  <link rel="canonical" href="https://tracker.wbupdates.com/details/{escape_html(pid)}.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tracker.wbupdates.com/details/{escape_html(pid)}.html">
+  <meta property="og:title" content="Promise Detail: {escape_html(p['highlight'] or p['text'][:40])} — WB Accountability Tracker">
+  <meta property="og:description" content="Factual tracking and history for: {escape_html(p['text'][:200])}...">
+  <meta property="og:image" content="https://tracker.wbupdates.com/og-preview.webp">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://tracker.wbupdates.com/details/{escape_html(pid)}.html">
+  <meta name="twitter:title" content="Promise Detail: {escape_html(p['highlight'] or p['text'][:40])} — WB Accountability Tracker">
+  <meta name="twitter:description" content="Factual tracking and history for: {escape_html(p['text'][:200])}...">
+  <meta name="twitter:image" content="https://tracker.wbupdates.com/og-preview.webp">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

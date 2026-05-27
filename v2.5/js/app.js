@@ -80,7 +80,7 @@ function renderMastheadMeta(meta) {
   ];
 
   container.innerHTML = items.map(item =>
-    `<div class="meta-item">
+    `<div class="meta-item${item.highlight ? ' meta-highlight' : ''}">
       <span class="meta-label">${escapeHtml(item.label)}</span>
       <span class="meta-value"${item.id ? ` id="${item.id}"` : ''}>${escapeHtml(item.value)}</span>
     </div>`
@@ -584,11 +584,15 @@ function renderCategories() {
                   <button class="promise-text ${(p.updateCount > 0 || p.counterCount > 0 || (p.noteCount || 0) > 0) ? 'has-details' : ''}" type="button" ${(p.updateCount > 0 || p.counterCount > 0 || (p.noteCount || 0) > 0) ? `onclick="togglePromiseDetails('${escapeHtml(p.id)}')"` : ''}>${highlightText(p.text, p.highlight)}</button>
                   <span class="note-tag note-${escapeHtml(p.status)}">${formatStatus(p.status)}</span>
                 </div>
-                ${(p.status === 'done' && p.resolutionNote) ? `
+                ${(p.status === 'done' && p.resolutionNote) ? (p.resolution === 'Done (On Paper)' ? `
+                  <div class="resolution-note-simple">
+                    📄 <strong>Currently Done (On Paper).</strong> Check Full Details page to know more.
+                  </div>
+                ` : `
                   <div class="detail-resolution-note">
                     ⚠️ <strong>Note on Resolution:</strong> ${escapeHtml(p.resolutionNote)}
                   </div>
-                ` : ''}
+                `) : ''}
                 <div class="promise-actions">
                   ${(p.updateCount > 0 || p.counterCount > 0 || (p.noteCount || 0) > 0) ? `
                     <button class="promise-meta" type="button" onclick="togglePromiseDetails('${escapeHtml(p.id)}')">
@@ -868,7 +872,7 @@ async function togglePromiseDetails(id, forceOpen = false) {
         .join('');
     };
 
-    const isOverflow = (promise.status === 'inprogress' && data.updates.length >= 4);
+    const isOverflow = (data.updates.length >= 4);
     const displayUpdates = isOverflow ? data.updates.slice(0, 3) : data.updates;
 
     if (Array.isArray(displayUpdates) && displayUpdates.length) {
@@ -935,7 +939,7 @@ async function togglePromiseDetails(id, forceOpen = false) {
       const remainingCount = data.updates.length - 3;
       html += `
         <div class="overflow-banner">
-          <span class="overflow-text">◑ Previewing the 3 latest updates. There are ${remainingCount} older updates for this active promise.</span>
+          <span class="overflow-text">◑ Previewing the 3 latest updates. There are ${remainingCount} older update${remainingCount === 1 ? '' : 's'} for this promise.</span>
           <a href="details/${escapeHtml(id)}.html" class="btn-view-overflow">View Full History & Evidence →</a>
         </div>
       `;

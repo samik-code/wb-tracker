@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Other Initiatives & Updates — WB Accountability Tracker</title>
+    <title>Other Initiatives: West Bengal Govt Administrative Actions</title>
+    <meta name="description" content="Track West Bengal government policies and administrative actions outside the BJP manifesto. Independent accountability monitoring.">
+    <meta name="keywords" content="west bengal government tracker, wb bjp promises, bjp work tracker bengal, west bengal cabinet decisions, suvendu adhikari policy updates">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tracker.wbupdates.com/initiatives.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tracker.wbupdates.com/initiatives.html">
+    <meta property="og:title" content="Other Initiatives & Updates — WB Accountability Tracker">
+    <meta property="og:description" content="Government initiatives and policy actions not part of the BJP 2026 manifesto, independently tracked for public accountability.">
+    <meta property="og:image" content="https://tracker.wbupdates.com/og-preview.webp">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Other Initiatives & Updates — WB Accountability Tracker">
+    <meta name="twitter:description" content="Government initiatives and policy actions not part of the BJP 2026 manifesto, independently tracked for public accountability.">
+    <meta name="twitter:image" content="https://tracker.wbupdates.com/og-preview.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
@@ -370,7 +388,7 @@
             if (!text) return '';
             const paras = chunkParagraphs(String(text), 360);
             return paras
-                .map(p => `<p>${escapeHtml(p).replace(/\*\*(.*?)\*\//g, '<strong>$1</strong>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`)
+                .map(p => `<p>${escapeHtml(p).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`)
                 .join('');
         }
 
@@ -449,13 +467,13 @@
 
                     item.innerHTML = `
                     <span class="non-manifesto-badge">Non-Manifesto Initiative</span>
-                    <span class="archive-item-meta">${u.category.replace('-', ' ')}</span>
-                    <span class="archive-item-title">${u.title}</span>
+                    <span class="archive-item-meta">${escapeHtml(u.category.replace('-', ' '))}</span>
+                    <span class="archive-item-title">${escapeHtml(u.title)}</span>
                     <div class="archive-item-note">${formatMultiParagraph(u.note)}</div>
                     ${nestedHtml}
                     ${u.sources ? `
                         <div class="item-sources">
-                            ${u.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener" class="archive-source-link">↗ ${s.name}</a>`).join('')}
+                            ${u.sources.map(s => `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener" class="archive-source-link">↗ ${escapeHtml(s.name)}</a>`).join('')}
                         </div>
                     ` : ''}
                 `;

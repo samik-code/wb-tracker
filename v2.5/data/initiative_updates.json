@@ -1,5 +1,44 @@
 [
   {
+    "promiseId": "update-8",
+    "title": "Subsidised ₹5 Fish-Rice Canteens",
+    "date": "2026-05-26",
+    "category": "inclusive",
+    "note": "Chief Minister Suvendu Adhikari announced the statewide introduction of fish-and-rice meals at a highly subsidised rate of ₹5, served across approximately 400 canteens to ensure affordable nutrition for the public and celebrate the culinary heritage of Bengal.",
+    "sources": [
+      {
+        "url": "https://timesofindia.indiatimes.com/india/west-bengal-suvendu-govt-announces-rs-5-fish-rice-meals-liquor-ban-near-schools-and-temples/articleshow/131326171.cms",
+        "name": "Times of India · May 26, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "update-9",
+    "title": "Liquor Shop Radius Restrictions",
+    "date": "2026-05-26",
+    "category": "governance",
+    "note": "Chief Minister Suvendu Adhikari announced strict new regulations prohibiting the operation of liquor shops within a one-kilometre radius of schools, colleges, and places of worship (temples) to enforce social discipline across the state.",
+    "sources": [
+      {
+        "url": "https://timesofindia.indiatimes.com/india/west-bengal-suvendu-govt-announces-rs-5-fish-rice-meals-liquor-ban-near-schools-and-temples/articleshow/131326171.cms",
+        "name": "Times of India · May 26, 2026"
+      }
+    ]
+  },
+  {
+    "promiseId": "update-7",
+    "title": "Colour-Coded ID Cards at State-Run Hospitals",
+    "date": "2026-05-26",
+    "category": "health",
+    "note": "The West Bengal Health Department directed the implementation of a colour-coded identity card system for all employees at state-run hospitals to prevent unauthorized access by middlemen and touts. Distinct card colors have been designated for doctors, nurses, lab techs, security, sanitation, and outsourced staff, with registration beginning on May 26, 2026, and scheduled to conclude on May 28, 2026.",
+    "sources": [
+      {
+        "url": "https://www.hindustantimes.com/cities/kolkata-news/bengal-govt-to-introduce-colour-coded-id-cards-for-staff-at-state-run-hospitals-101779702817064.html",
+        "name": "Hindustan Times · May 25, 2026"
+      }
+    ]
+  },
+  {
     "promiseId": "update-6",
     "title": "Prohibition on Media Interactions for Officials",
     "date": "2026-05-21",

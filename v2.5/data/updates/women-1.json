@@ -1,6 +1,27 @@
 {
   "updates": [
     {
+      "note": "Chief Minister Suvendu Adhikari officially released the online and offline application forms for the Annapurna Bhandar (Yojana) scheme, launching a 90-day registration and verification window starting June 1, 2026. Overseen by the Chief Secretary and Finance Secretary, the audit aims to verify eligibility and eliminate approximately 30 lakh duplicate or ineligible records currently migrated from the previous Lakshmir Bhandar scheme. Women aged 25–60 registering by June 2 will receive their first ₹3,000 disbursement in June, with older scheme payouts continuing in the interim to avoid disruption. While excluding income tax payees, government employees, and those receiving permanent salaries or pensions from statutory or aided bodies, the scheme explicitly accommodates CAA citizenship applicants and individuals with pending voter tribunal appeals. Print forms have been published on the official social security portal in both English and Bengali, though the online registration portal remains inactive.",
+      "sources": [
+        {
+          "url": "https://www.anandabazar.com/west-bengal/press-conference-of-chief-minister-suvendu-adhikari-live-updates-dgtl/cid/1689486",
+          "name": "Anandabazar Patrika · May 27, 2026"
+        },
+        {
+          "url": "https://bengali.abplive.com/district/suvendu-adhikari-west-bengal-annapurna-yojana-form-online-offline-details-1180273",
+          "name": "ABP Ananda · May 27, 2026"
+        },
+        {
+          "url": "https://socialsecurity.wb.gov.in/public/pdf/Annapurna%20Yojana%20Family%20Level%20Data%20Collection%20Form%20final.pdf",
+          "name": "Govt of West Bengal · Annapurna Yojana Form (English) · May 27, 2026"
+        },
+        {
+          "url": "https://socialsecurity.wb.gov.in/public/pdf/Annapurna_Yojana_Family_Level_Data_Collection_Form.pdf",
+          "name": "Govt of West Bengal · Annapurna Yojana Form (Bengali) · May 27, 2026"
+        }
+      ]
+    },
+    {
       "note": "The Department of Women & Child Development and Social Welfare issued the formal gazette notification (No. 2411-WCD/O/AB-4/2026 dated 19 May 2026) officially constituting the 'Annapurna Yojana' scheme. The notification confirms ₹3,000 per month will be credited via Direct Benefit Transfer (DBT) to Aadhaar-linked bank accounts, **effective 1 June 2026**.\n\nEligibility is defined as women aged 25–60 years who are not in permanent government employment (union or state), not drawing salary/pension from any statutory body, panchayat, or aided institution, and are not income-tax payees. **All existing Lakshmir Bhandar beneficiaries (except those dead, shifted, deleted, or identified as absentee electors during SIR-2026) will be automatically migrated.** An online application portal for new applicants opens on 1 June 2026. Sanctioning authority rests with District Magistrates in districts and the KMC Commissioner in Kolkata Municipal Corporation area. This notification was issued with concurrence of the Finance Department.",
       "sources": [
         {
