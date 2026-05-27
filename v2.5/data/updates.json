@@ -1,5 +1,22 @@
 [
   {
+    "promiseId": "infrastructure-4",
+    "title": "VIP Road Diversion & Beleghata FOB Clearances",
+    "date": "2026-05-26",
+    "category": "infrastructure",
+    "note": "In significant advancements for the Orange Line metro corridor, construction has commenced on a new 175-meter traffic diversion road at the Haldiram crossing on VIP Road, while Rail Vikas Nigam Limited (RVNL) received police clearance for a 45-day traffic block on the EM Bypass starting June 1, 2026.\n\nThe new diversion road near Chinar Park is designed to allow the construction of the final two complex portal piers (P816 and P817) and is scheduled for completion by June 2026. On the EM Bypass, the traffic curbs will enable the construction of a long-pending foot overbridge (FOB) to connect both sides of the Beleghata metro station, providing safe commuter access.",
+    "sources": [
+      {
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/new-road-to-take-traffic-from-airport-to-city-via-chinar-park/amp_articleshow/131335477.cms",
+        "name": "Times of India · May 26, 2026"
+      },
+      {
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/rvnl-gets-cop-nod-for-traffic-curbs-on-bypass-to-build-beleghata-stn-fob/articleshow/131335475.cms",
+        "name": "Times of India · May 26, 2026"
+      }
+    ]
+  },
+  {
     "promiseId": "women-1",
     "title": "Annapurna Yojana Forms Released & Transition Detailed",
     "date": "2026-05-27",
